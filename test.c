@@ -1,3 +1,6 @@
+#include <stdio.h>
+
 int main () {
-    return 0;
+  printf("hi");
+  return 0;
 }
