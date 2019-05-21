@@ -2,6 +2,9 @@
 #include <openssl/evp.h>
 #include <openssl/err.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "base64decode.h"
 
 void handleErrors(void)
 {
@@ -29,7 +32,7 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
      * IV size for *most* modes is the same as the block size. For AES this
      * is 128 bits
      */
-    if(1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv))
+    if(1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_ecb(), NULL, key, iv))
         handleErrors();
 
     /*
@@ -74,7 +77,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
      * IV size for *most* modes is the same as the block size. For AES this
      * is 128 bits
      */
-    if(1 != EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv))
+    if(1 != EVP_DecryptInit_ex(ctx, EVP_aes_256_ecb(), NULL, key, iv))
         handleErrors();
 
     /*
@@ -99,6 +102,9 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
     return plaintext_len;
 }
 
+/* A 256 bit key */
+unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
+
 int main (void)
 {
     /*
@@ -106,15 +112,20 @@ int main (void)
      * real application? :-)
      */
 
-    /* A 256 bit key */
-    unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
-
     /* A 128 bit IV */
     unsigned char *iv = (unsigned char *)"0123456789012345";
 
-    /* Message to be encrypted */
+		/* String to append, base64 decoded */
+		char *to_append =
+				"Um9sbGluJyBpbiBteSA1LjAKV2l0aCBteSByYWctdG9wIGRvd24gc28gbXkgaGFpciBjYW4gYmxvdwpUaGUgZ2lybGllcyBvbiBzdGFuZGJ5IHdhdmluZyBqdXN0IHRvIHNheSBoaQpEaWQgeW91IHN0b3A/IE5vLCBJIGp1c3QgZHJvdmUgYnkK";
+		char* to_append_decoded;
+		size_t test;
+		Base64Decode(to_append, &to_append_decoded, &test);
+
+		/* Message to be encrypted */
+		char *text = "The quick brown fox jumps over the lazy dog";
     unsigned char *plaintext =
-        (unsigned char *)"The quick brown fox jumps over the lazy dog";
+        (unsigned char *)strcat(text, to_append_decoded);
 
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
