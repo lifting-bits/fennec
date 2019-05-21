@@ -110,10 +110,11 @@ int main (void)
      */
 
 		 /* A 256 bit key */
-		 unsigned char *key = NULL;
+		 unsigned char key[256];
 		 for (unsigned int i = 0; i < 8; i ++) {
 		 		((int *)key)[i] = rand();
 		 }
+		 //unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
 
     /* A 128 bit IV */
     unsigned char *iv = (unsigned char *)"0123456789012345";
@@ -124,11 +125,19 @@ int main (void)
 		char* to_append_decoded;
 		size_t test;
 		Base64Decode(to_append, &to_append_decoded, &test);
+	  //printf("%s", to_append_decoded);
+		//char* to_append_decoded = "hi";
 
 		/* Message to be encrypted */
 		char *text = "The quick brown fox jumps over the lazy dog";
-    unsigned char *plaintext =
-        (unsigned char *)strcat(text, to_append_decoded);
+		char p[strlen(text) + strlen(to_append_decoded)];
+		strcpy(p, text);
+		strcat(p, to_append_decoded);
+		unsigned char *plaintext = (unsigned char *)p;
+		// printf("created plaintext\n");
+		// printf("%s", plaintext);
+    // unsigned char *plaintext =
+    //     (unsigned char *)strcat(text, to_append_decoded);
 
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
@@ -150,17 +159,18 @@ int main (void)
     printf("Ciphertext is:\n");
     BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
 
-    /* Decrypt the ciphertext */
-    decryptedtext_len = decrypt(ciphertext, ciphertext_len, key, iv,
-                                decryptedtext);
-
-    /* Add a NULL terminator. We are expecting printable text */
-    decryptedtext[decryptedtext_len] = '\0';
-
-    /* Show the decrypted text */
-    printf("Decrypted text is:\n");
-    printf("%s\n", decryptedtext);
-
-
-    return 0;
+		return 0;
+    // /* Decrypt the ciphertext */
+    // decryptedtext_len = decrypt(ciphertext, ciphertext_len, key, iv,
+    //                             decryptedtext);
+		//
+    // /* Add a NULL terminator. We are expecting printable text */
+    // decryptedtext[decryptedtext_len] = '\0';
+		//
+    // /* Show the decrypted text */
+    // printf("Decrypted text is:\n");
+    // printf("%s\n", decryptedtext);
+		//
+		//
+    // return 0;
 }
