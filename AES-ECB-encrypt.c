@@ -102,15 +102,18 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
     return plaintext_len;
 }
 
-/* A 256 bit key */
-unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
-
 int main (void)
 {
     /*
      * Set up the key and iv. Do I need to say to not hard code these in a
      * real application? :-)
      */
+
+		 /* A 256 bit key */
+		 unsigned char *key = NULL;
+		 for (unsigned int i = 0; i < 8; i ++) {
+		 		((int *)key)[i] = rand();
+		 }
 
     /* A 128 bit IV */
     unsigned char *iv = (unsigned char *)"0123456789012345";

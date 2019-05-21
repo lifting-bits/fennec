@@ -1,3 +1,5 @@
+//modified from https://gist.github.com/barrysteyn/7308212#file-base64decode-c
+
 //Decodes Base64
 #include <stdio.h>
 #include <string.h>
