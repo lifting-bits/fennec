@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "base64decode.h"
+#include "base64encode.h"
 
 void handleErrors(void)
 {
@@ -57,7 +58,7 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
     return ciphertext_len;
 }
 
-int main (void)
+int main (int argc, char **argv)
 {
     /* Set up the key and iv */
 
@@ -78,7 +79,7 @@ int main (void)
 		Base64Decode(to_append, &to_append_decoded, &test);
 
 		/* Message to be encrypted */
-		char *text = "The quick brown fox jumps over the lazy dog";
+		char *text = argv[1];
 		char p[strlen(text) + strlen(to_append_decoded)];
 		strcpy(p, text);
 		strcat(p, to_append_decoded);
@@ -99,7 +100,12 @@ int main (void)
 
     /* Do something useful with the ciphertext here */
     printf("Ciphertext is:\n");
-    BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
+    char *ciphertext_base64;
+    const unsigned char *c = (const unsigned char *)ciphertext;
+    Base64Encode(c, strlen((const char *)c), &ciphertext_base64);
+    printf("%s", ciphertext_base64);
+    printf("\n");
+    // BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
 
     return 0;
 }
