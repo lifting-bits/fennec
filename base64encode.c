@@ -1,3 +1,5 @@
+//modified from https://gist.github.com/barrysteyn/7308212#file-base64encode-c
+
 //Encodes Base64
 #include <openssl/bio.h>
 #include <openssl/evp.h>

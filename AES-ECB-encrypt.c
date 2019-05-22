@@ -74,7 +74,7 @@ int main (int argc, char **argv)
 		/* String to append, base64 decoded */
 		char *to_append =
 				"Um9sbGluJyBpbiBteSA1LjAKV2l0aCBteSByYWctdG9wIGRvd24gc28gbXkgaGFpciBjYW4gYmxvdwpUaGUgZ2lybGllcyBvbiBzdGFuZGJ5IHdhdmluZyBqdXN0IHRvIHNheSBoaQpEaWQgeW91IHN0b3A/IE5vLCBJIGp1c3QgZHJvdmUgYnkK";
-		char* to_append_decoded;
+		char *to_append_decoded;
 		size_t test;
 		Base64Decode(to_append, &to_append_decoded, &test);
 
