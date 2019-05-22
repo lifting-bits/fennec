@@ -99,11 +99,13 @@ int main (int argc, char **argv)
                               ciphertext);
 
     /* Do something useful with the ciphertext here */
-    printf("Ciphertext is:\n");
+    // printf("Ciphertext is:\n");
     char *ciphertext_base64;
     const unsigned char *c = (const unsigned char *)ciphertext;
     Base64Encode(c, strlen((const char *)c), &ciphertext_base64);
     printf("%s", ciphertext_base64);
+    printf("\n");
+    printf("%d", ciphertext_len);
     printf("\n");
     // BIO_dump_fp (stdout, (const char *)ciphertext, ciphertext_len);
 
