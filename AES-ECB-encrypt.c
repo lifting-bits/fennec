@@ -90,7 +90,7 @@ int main (int argc, char **argv)
      * ciphertext which may be longer than the plaintext, depending on the
      * algorithm and mode.
      */
-    unsigned char ciphertext[128];
+    unsigned char ciphertext[256];
 
     int ciphertext_len;
 

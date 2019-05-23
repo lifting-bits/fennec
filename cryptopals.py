@@ -1,26 +1,55 @@
 import subprocess
 import base64
 
+def encrypt(input):
+    p = subprocess.Popen(["./encrypt", input], stdout=subprocess.PIPE)
+    result = p.stdout.readlines()
+    ciphertext_len = int(result[1])
+    ciphertext = result[0]
+    return [ciphertext, ciphertext_len]
+
 def blocksize():
     input = ""
-    p = subprocess.Popen(["./encrypt", input], stdout=subprocess.PIPE)
-    initial = int(p.stdout.readlines()[1])
+    initial = (encrypt(input))[1]
     current = initial
     while current == initial:
         input += "A"
-        p = subprocess.Popen(["./encrypt", input], stdout=subprocess.PIPE)
-        current = int(p.stdout.readlines()[1])
+        current = (encrypt(input))[1]
     return current - initial
 
 def check_ecb(blocksize):
     plaintext = "0" * 128
-    p = subprocess.Popen(["./encrypt", plaintext], stdout=subprocess.PIPE)
-    ciphertext = p.stdout.readlines()[0]
-    split = []
+    ciphertext = (encrypt(plaintext))[0]
+    split = set()
     for i in range(0, len(ciphertext), blocksize):
-        split.append(ciphertext[i:(i + blocksize)])
-    set_of_splits = set(split)
-    return len(split) - len(set_of_splits) > 0
+        check = ciphertext[i:(i + blocksize)]
+        if check in split:
+            return True
+        split.add(check)
+    return False
 
-print (blocksize())
-print (check_ecb(blocksize()))
+def next_byte(blocksize, current):
+    input_length = (blocksize - 1 - len(current)) % blocksize
+    input_block = "A" * input_length
+    byte_position = len(current) + input_length + 1
+    encrypted = (encrypt(input_block))[0]
+    for i in range(32, 127):
+        new_string = input_block + current + chr(i)
+        print(new_string)
+        new_encrypted = (encrypt(new_string))[0]
+        # print(new_encrypted)
+        if new_encrypted[0:byte_position] == encrypted[0:byte_position]:
+            return chr(i)
+    return ""
+
+def solve():
+    size = blocksize()
+    assert check_ecb(size)
+    next_byte(size, "")
+    ciphertext_len = (encrypt(""))[1]
+    result = ""
+    for i in range(ciphertext_len):
+        result += next_byte(size, result)
+    return result
+
+solve()
