@@ -2,14 +2,14 @@ import subprocess
 import base64
 
 def encrypt(plaintext):
-    # plaintext_b64 = base64.b64encode(plaintext)
-    p = subprocess.Popen(["./encrypt", plaintext], stdout=subprocess.PIPE)
+    plaintext_b64 = base64.b64encode(bytes(plaintext, 'utf-8'))
+    p = subprocess.Popen(["./encrypt", plaintext_b64], stdout=subprocess.PIPE)
     result = p.stdout.readlines()
     ciphertext_len = int(result[1])
     ciphertext = result[0]
     return [ciphertext, ciphertext_len]
 
-print(encrypt("hi"))
+print(encrypt("AAAAAAAAAAAAAAA"))
 
 def blocksize():
     input = ""
@@ -36,7 +36,7 @@ def next_byte(blocksize, current):
     input_block = "A" * input_length
     byte_position = len(current) + input_length + 1
     encrypted = (encrypt(input_block))[0]
-    for i in range(1, 128):
+    for i in range(1, 127):
         new_string = input_block + current + chr(i)
         print(new_string)
         new_encrypted = (encrypt(new_string))[0]

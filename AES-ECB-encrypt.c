@@ -72,37 +72,39 @@ int main (int argc, char **argv)
 		char *to_append =
 				"Um9sbGluJyBpbiBteSA1LjAKV2l0aCBteSByYWctdG9wIGRvd24gc28gbXkgaGFpciBjYW4gYmxvdwpUaGUgZ2lybGllcyBvbiBzdGFuZGJ5IHdhdmluZyBqdXN0IHRvIHNheSBoaQpEaWQgeW91IHN0b3A/IE5vLCBJIGp1c3QgZHJvdmUgYnkK";
 		char *to_append_decoded;
-		size_t test;
-		Base64Decode(to_append, &to_append_decoded, &test);
+		size_t to_append_len;
+		Base64Decode(to_append, &to_append_decoded, &to_append_len);
 
 		/* Message to be encrypted */
-		char *text = argv[1];
-    // char *text;
-    // size_t test2;
-    // Base64Decode(text_base64, &text, &test2);
-		char p[strlen(text) + strlen(to_append_decoded) + 1];
-		memcpy(p, text, strlen(text));
-    memcpy(p + strlen(text), to_append_decoded, strlen(to_append_decoded) + 1);
+		char *text_base64 = argv[1];
+    char *text;
+    size_t text_len;
+    Base64Decode(text_base64, &text, &text_len);
+
+		char p[text_len + to_append_len + 1];
+		memcpy(p, text, text_len);
+    memcpy(p + text_len, to_append_decoded, to_append_len + 1);
 		unsigned char *plaintext = (unsigned char *)p;
+    size_t p_len = text_len + to_append_len;
 
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
      * ciphertext which may be longer than the plaintext, depending on the
      * algorithm and mode.
      */
-    unsigned char ciphertext[strlen(p)];
+    unsigned char ciphertext[p_len];
 
     int ciphertext_len;
 
     /* Encrypt the plaintext */
-    ciphertext_len = encrypt (plaintext, strlen ((char *)plaintext), key, iv,
+    ciphertext_len = encrypt (plaintext, p_len, key, iv,
                               ciphertext);
 
     /* Do something useful with the ciphertext here */
     // printf("Ciphertext is:\n");
     char *ciphertext_base64;
     const unsigned char *c = (const unsigned char *)ciphertext;
-    Base64Encode(c, strlen((const char *)c), &ciphertext_base64);
+    Base64Encode(c, ciphertext_len, &ciphertext_base64);
     printf("%s", ciphertext_base64);
     printf("\n");
     printf("%d", ciphertext_len);
