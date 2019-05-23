@@ -63,10 +63,7 @@ int main (int argc, char **argv)
     /* Set up the key and iv */
 
 		 /* A 256 bit key */
-		 unsigned char key[256];
-		 for (unsigned int i = 0; i < 8; i ++) {
-		 		((int *)key)[i] = rand();
-		 }
+     unsigned char *key = (unsigned char *)"16807282475249162265007398494365811441089304702112721010275441457850878";
 
     /* A 128 bit IV */
     unsigned char *iv = (unsigned char *)"0123456789012345";
@@ -80,9 +77,12 @@ int main (int argc, char **argv)
 
 		/* Message to be encrypted */
 		char *text = argv[1];
-		char p[strlen(text) + strlen(to_append_decoded)];
-		strcpy(p, text);
-		strcat(p, to_append_decoded);
+    // char *text;
+    // size_t test2;
+    // Base64Decode(text_base64, &text, &test2);
+		char p[strlen(text) + strlen(to_append_decoded) + 1];
+		memcpy(p, text, strlen(text));
+    memcpy(p + strlen(text), to_append_decoded, strlen(to_append_decoded) + 1);
 		unsigned char *plaintext = (unsigned char *)p;
 
     /*
@@ -90,7 +90,7 @@ int main (int argc, char **argv)
      * ciphertext which may be longer than the plaintext, depending on the
      * algorithm and mode.
      */
-    unsigned char ciphertext[256];
+    unsigned char ciphertext[strlen(p)];
 
     int ciphertext_len;
 

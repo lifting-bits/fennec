@@ -1,12 +1,15 @@
 import subprocess
 import base64
 
-def encrypt(input):
-    p = subprocess.Popen(["./encrypt", input], stdout=subprocess.PIPE)
+def encrypt(plaintext):
+    # plaintext_b64 = base64.b64encode(plaintext)
+    p = subprocess.Popen(["./encrypt", plaintext], stdout=subprocess.PIPE)
     result = p.stdout.readlines()
     ciphertext_len = int(result[1])
     ciphertext = result[0]
     return [ciphertext, ciphertext_len]
+
+print(encrypt("hi"))
 
 def blocksize():
     input = ""
@@ -18,7 +21,7 @@ def blocksize():
     return current - initial
 
 def check_ecb(blocksize):
-    plaintext = "0" * 128
+    plaintext = "0" * 64
     ciphertext = (encrypt(plaintext))[0]
     split = set()
     for i in range(0, len(ciphertext), blocksize):
@@ -33,14 +36,14 @@ def next_byte(blocksize, current):
     input_block = "A" * input_length
     byte_position = len(current) + input_length + 1
     encrypted = (encrypt(input_block))[0]
-    for i in range(32, 127):
+    for i in range(1, 128):
         new_string = input_block + current + chr(i)
         print(new_string)
         new_encrypted = (encrypt(new_string))[0]
         # print(new_encrypted)
         if new_encrypted[0:byte_position] == encrypted[0:byte_position]:
             return chr(i)
-    return ""
+    return None
 
 def solve():
     size = blocksize()
@@ -50,6 +53,7 @@ def solve():
     result = ""
     for i in range(ciphertext_len):
         result += next_byte(size, result)
+        print(result)
     return result
 
 solve()
