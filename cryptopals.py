@@ -9,7 +9,7 @@ def encrypt(plaintext):
     ciphertext = result[0]
     return [ciphertext, ciphertext_len]
 
-print(encrypt("AAAAAAAAAAAAAAA"))
+# print(encrypt("AAAAAAAAAAAAAAA"))
 
 def blocksize():
     input = ""
@@ -21,7 +21,7 @@ def blocksize():
     return current - initial
 
 def check_ecb(blocksize):
-    plaintext = "0" * 64
+    plaintext = "A" * (blocksize * 4)
     ciphertext = (encrypt(plaintext))[0]
     split = set()
     for i in range(0, len(ciphertext), blocksize):
@@ -48,7 +48,7 @@ def next_byte(blocksize, current):
 def solve():
     size = blocksize()
     assert check_ecb(size)
-    next_byte(size, "")
+    # next_byte(size, "")
     ciphertext_len = (encrypt(""))[1]
     result = ""
     for i in range(ciphertext_len):
