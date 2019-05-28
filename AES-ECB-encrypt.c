@@ -85,7 +85,7 @@ int main (int argc, char **argv)
 		memcpy(p, text, text_len);
     memcpy(p + text_len, to_append_decoded, to_append_len + 1);
 		unsigned char *plaintext = (unsigned char *)p;
-    size_t p_len = text_len + to_append_len;
+    size_t p_len = text_len + to_append_len + 1;
 
     /*
      * Buffer for ciphertext. Ensure the buffer is long enough for the
