@@ -51,11 +51,13 @@ def prefix_length(blocksize):
     # find last block of prefix
     empty = encrypt("")
     one_char = encrypt("A")
+    print(one_char[1])
     prefix_len = 0
     for i in range(0, one_char[1], blocksize):
-        if empty[i:(i + blocksize)] != one_char[i:(i + blocksize)]:
+        if (empty[0])[i:(i + blocksize)] != (one_char[0])[i:(i + blocksize)]:
             prefix_len = i
             break
+    print(prefix_len)
     # find index of prefix in block
     test = "A" * blocksize * 2
     for j in range(blocksize):
@@ -67,6 +69,7 @@ def prefix_length(blocksize):
 
 def solve():
     size = blocksize()
+    print(size)
     assert check_ecb(size)
     prefix_len = prefix_length(size)
     print("prefix length: ")
