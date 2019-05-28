@@ -69,7 +69,6 @@ int main (int argc, char **argv)
     unsigned char *iv = (unsigned char *)"0123456789012345";
 
     char *prefix = "0b039286d997a33c9e463b296e4dc7be4c666390cc85";
-
     size_t prefix_len = 22;
 
 		/* String to append, base64 decoded */
