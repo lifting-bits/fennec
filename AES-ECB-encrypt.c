@@ -68,6 +68,10 @@ int main (int argc, char **argv)
     /* A 128 bit IV */
     unsigned char *iv = (unsigned char *)"0123456789012345";
 
+    char *prefix = "0b039286d997a33c9e463b296e4dc7be4c666390cc85";
+
+    size_t prefix_len = 22;
+
 		/* String to append, base64 decoded */
 		char *to_append =
 				"Um9sbGluJyBpbiBteSA1LjAKV2l0aCBteSByYWctdG9wIGRvd24gc28gbXkgaGFpciBjYW4gYmxvdwpUaGUgZ2lybGllcyBvbiBzdGFuZGJ5IHdhdmluZyBqdXN0IHRvIHNheSBoaQpEaWQgeW91IHN0b3A/IE5vLCBJIGp1c3QgZHJvdmUgYnkK";
@@ -81,9 +85,10 @@ int main (int argc, char **argv)
     size_t text_len;
     Base64Decode(text_base64, &text, &text_len);
 
-		char p[text_len + to_append_len + 1];
-		memcpy(p, text, text_len);
-    memcpy(p + text_len, to_append_decoded, to_append_len + 1);
+		char p[prefix_len + text_len + to_append_len + 1];
+    memcpy(p, prefix, prefix_len);
+		memcpy(p + prefix_len, text, text_len);
+    memcpy(p + prefix_len + text_len, to_append_decoded, to_append_len + 1);
 		unsigned char *plaintext = (unsigned char *)p;
     size_t p_len = text_len + to_append_len;
 
