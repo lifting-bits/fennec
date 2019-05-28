@@ -36,6 +36,7 @@ def next_byte(blocksize, prefix_length, current):
     encrypted = (encrypt(input_block))[0]
     for i in range(1, 127):
         new_string = input_block + current + chr(i)
+        print("Testing: " + repr(new_string))
         new_encrypted = (encrypt(new_string))[0]
         if new_encrypted[0:byte_position] == encrypted[0:byte_position]:
             return chr(i)
@@ -80,12 +81,13 @@ def solve():
     result = ""
     input_length = size - 1
     for i in range(ciphertext_len):
+        print("i = " + str(i))
         to_add = next_byte(size, prefix_len, result)
         if to_add == None:
             return result
         else:
             result += to_add
-        print(repr(result))
+        print("result: " + repr(result))
     return result
 
 print(repr(solve()))
