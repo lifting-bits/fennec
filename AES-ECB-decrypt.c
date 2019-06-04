@@ -65,8 +65,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 		memcpy(iv_signed, withIV, 16);
 		iv_signed[16] = '\0';
 
-		char *ciphertext_base64 = withIV + 16;
-		printf("%s", ciphertext_base64);
+		char *ciphertext_base64 = withIV + 17;
 		// char *ciphertext_base64 = "uVVOKngftfPXJiOviN4dxFC+2azy0y0k9DlzB6Kaeqb5U1VhVLcvYg8mtrTZbeq9SoMn0blatKWeGGOIMCj1ewN6eXr7eP8Btx8k69V0HfbB9iDfznQukvMNrRPmvVid3493z+8xrYBQSa0i/5g6mIohV4rjQ12K1eBwOAvaS+TvrZBpMjfXpxJh+6fyR8bgc/cHzMEbJRwaE8uKppSMGvQq2i1Svjknzecv+hUh4Sg=";
 		char *ciphertext_signed;
 		size_t ciphertext_len;
