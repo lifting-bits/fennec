@@ -78,7 +78,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 	 	/* A 128 bit IV */
 	 	unsigned char *iv = (unsigned char *)iv_signed;
 
-		unsigned char decryptedtext[ciphertext_len];
+		unsigned char decryptedtext[ciphertext_len + 1];
 	  int decryptedtext_len;
 
     /* Decrypt the ciphertext */
