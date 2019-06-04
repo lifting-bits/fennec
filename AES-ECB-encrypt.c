@@ -58,15 +58,22 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
     return ciphertext_len;
 }
 
+unsigned char *generate_iv()
+{
+    return (unsigned char *)"0123456789012345";
+}
+
 int main (int argc, char **argv)
 {
     /* Set up the key and iv */
 
-		 /* A 128 bit key */
-     unsigned char *key = (unsigned char *)"16807282475249162265007398494365";
+		/* A 128 bit key */
+    unsigned char *key = (unsigned char *)"16807282475249162265007398494365";
 
     /* A 128 bit IV */
-    unsigned char *iv = (unsigned char *)"0123456789012345";
+    unsigned char *iv = generate_iv();
+    size_t iv_len = 16;
+    // unsigned char *delimiter = (unsigned char *)"/";
 
     char *prefix = "0b039286d997a33c9e463b296e4dc7be4c666390cc85";
     size_t prefix_len = 22;
@@ -79,10 +86,8 @@ int main (int argc, char **argv)
 		Base64Decode(to_append, &to_append_decoded, &to_append_len);
 
 		/* Message to be encrypted */
-		char *text_base64 = argv[1];
-    char *text;
-    size_t text_len;
-    Base64Decode(text_base64, &text, &text_len);
+		char *text = argv[1];
+    size_t text_len = strlen(text);
 
 		char p[prefix_len + text_len + to_append_len + 1];
     memcpy(p, prefix, prefix_len);
@@ -97,15 +102,17 @@ int main (int argc, char **argv)
      * algorithm and mode.
      */
     unsigned char ciphertext[p_len];
-
-    unsigned char decryptedtext[p_len];
-
     int ciphertext_len;
-    int decryptedtext_len;
 
     /* Encrypt the plaintext */
     ciphertext_len = encrypt (plaintext, p_len, key, iv,
                               ciphertext);
+
+    /* With IV */
+    // unsigned char withIV[p_len + iv_len];
+    // memcpy(withIV, iv, iv_len);
+    // // memcpy(withIV + iv_len, delimiter, 1);
+    // memcpy(withIV + iv_len, ciphertext, p_len);
 
     /* Do something useful with the ciphertext here */
     // printf("Ciphertext is:\n");
@@ -113,6 +120,13 @@ int main (int argc, char **argv)
     const unsigned char *c = (const unsigned char *)ciphertext;
     Base64Encode(c, ciphertext_len, &ciphertext_base64);
     printf("%s", ciphertext_base64);
+    printf("\n");
+    // printf("%lu", strlen(ciphertext_base64));
+    size_t lengthtoadd = (size_t)strlen(ciphertext_base64);
+    unsigned char withIV[lengthtoadd + iv_len + 1];
+    memcpy(withIV, iv, iv_len);
+    memcpy(withIV + iv_len, ciphertext_base64, lengthtoadd + 1);
+    printf("%s", withIV);
     printf("\n");
     printf("%d", ciphertext_len);
     printf("\n");
