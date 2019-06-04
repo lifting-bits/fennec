@@ -86,8 +86,10 @@ int main (int argc, char **argv)
 		Base64Decode(to_append, &to_append_decoded, &to_append_len);
 
 		/* Message to be encrypted */
-		char *text = argv[1];
-    size_t text_len = strlen(text);
+		char *text_base64 = argv[1];
+    char *text;
+    size_t text_len;
+    Base64Decode(text_base64, &text, &text_len);
 
 		char p[prefix_len + text_len + to_append_len + 1];
     memcpy(p, prefix, prefix_len);
@@ -119,9 +121,7 @@ int main (int argc, char **argv)
     char *ciphertext_base64;
     const unsigned char *c = (const unsigned char *)ciphertext;
     Base64Encode(c, ciphertext_len, &ciphertext_base64);
-    printf("%s", ciphertext_base64);
-    printf("\n");
-    // printf("%lu", strlen(ciphertext_base64));
+
     size_t lengthtoadd = (size_t)strlen(ciphertext_base64);
     unsigned char withIV[lengthtoadd + iv_len + 1];
     memcpy(withIV, iv, iv_len);
