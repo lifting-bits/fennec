@@ -33,7 +33,7 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
      * IV size for *most* modes is the same as the block size. For AES this
      * is 128 bits
      */
-    if(1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_ecb(), NULL, key, iv))
+    if(1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv))
         handleErrors();
 
     /*
@@ -58,22 +58,15 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
     return ciphertext_len;
 }
 
-unsigned char *generate_iv()
-{
-    return (unsigned char *)"0123456789012345";
-}
-
 int main (int argc, char **argv)
 {
     /* Set up the key and iv */
 
-		/* A 128 bit key */
-    unsigned char *key = (unsigned char *)"16807282475249162265007398494365";
+		 /* A 128 bit key */
+     unsigned char *key = (unsigned char *)"16807282475249162265007398494365";
 
     /* A 128 bit IV */
-    unsigned char *iv = generate_iv();
-    size_t iv_len = 16;
-    unsigned char *delimiter = (unsigned char *)"/";
+    unsigned char *iv = (unsigned char *)"0123456789012345";
 
     char *prefix = "0b039286d997a33c9e463b296e4dc7be4c666390cc85";
     size_t prefix_len = 22;
@@ -104,7 +97,11 @@ int main (int argc, char **argv)
      * algorithm and mode.
      */
     unsigned char ciphertext[p_len];
+
+    unsigned char decryptedtext[p_len];
+
     int ciphertext_len;
+    int decryptedtext_len;
 
     /* Encrypt the plaintext */
     ciphertext_len = encrypt (plaintext, p_len, key, iv,
@@ -115,13 +112,7 @@ int main (int argc, char **argv)
     char *ciphertext_base64;
     const unsigned char *c = (const unsigned char *)ciphertext;
     Base64Encode(c, ciphertext_len, &ciphertext_base64);
-
-    size_t lengthtoadd = (size_t)strlen(ciphertext_base64);
-    unsigned char withIV[lengthtoadd + iv_len + 2];
-    memcpy(withIV, iv, iv_len);
-    memcpy(withIV + iv_len, delimiter, 1);
-    memcpy(withIV + iv_len + 1, ciphertext_base64, lengthtoadd + 1);
-    printf("%s", withIV);
+    printf("%s", ciphertext_base64);
     printf("\n");
     printf("%d", ciphertext_len);
     printf("\n");
