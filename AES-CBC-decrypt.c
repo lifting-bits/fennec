@@ -61,11 +61,13 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 	int main (int argc, char **argv)
 	{
 		char *withIV = argv[1];
-		char iv_base64[17];
-		memcpy(iv_base64, withIV, 16);
-		iv_base64[16] = '\0';
+		size_t iv_b64len = 24;
+		char iv_base64[iv_b64len + 1];
+		memcpy(iv_base64, withIV, iv_b64len);
+		iv_base64[iv_b64len] = '\0';
+		printf("%s", iv_base64);		
 
-		char *ciphertext_base64 = withIV + 17;
+		char *ciphertext_base64 = withIV + iv_b64len + 1;
 		// char *ciphertext_base64 = "uVVOKngftfPXJiOviN4dxFC+2azy0y0k9DlzB6Kaeqb5U1VhVLcvYg8mtrTZbeq9SoMn0blatKWeGGOIMCj1ewN6eXr7eP8Btx8k69V0HfbB9iDfznQukvMNrRPmvVid3493z+8xrYBQSa0i/5g6mIohV4rjQ12K1eBwOAvaS+TvrZBpMjfXpxJh+6fyR8bgc/cHzMEbJRwaE8uKppSMGvQq2i1Svjknzecv+hUh4Sg=";
 		char *ciphertext_signed;
 		size_t ciphertext_len;
@@ -78,15 +80,18 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 		char *iv_signed;
 		size_t iv_len;
 		Base64Decode(iv_base64, &iv_signed, &iv_len);
-	 	unsigned char *iv = (unsigned char *)iv_signed;
-
+	 	unsigned char *iv = (unsigned char *)"0123456789012345";//(unsigned char *)iv_signed;
+		printf("%s", iv);
+		printf("%lu", iv_len);
+		printf("%lu", ciphertext_len);
 		unsigned char decryptedtext[ciphertext_len + 1];
 	  int decryptedtext_len;
 
     /* Decrypt the ciphertext */
     decryptedtext_len = decrypt(ciphertext, ciphertext_len, key, iv,
                                 decryptedtext);
-
+	
+    printf("%d", decryptedtext_len);
     /* Add a NULL terminator. We are expecting printable text */
     decryptedtext[decryptedtext_len] = '\0';
 

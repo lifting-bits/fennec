@@ -69,7 +69,7 @@ int main (int argc, char **argv)
     /* A 128 bit IV */
     unsigned char *iv = generate_iv();
     size_t iv_len = 16;
-    unsigned char *delimiter = (unsigned char *)"//";
+    unsigned char *delimiter = (unsigned char *)"/";
 
     char *prefix = ""; // "0b039286d997a33c9e463b296e4dc7be4c666390cc85";
     size_t prefix_len = 22;
@@ -111,6 +111,7 @@ int main (int argc, char **argv)
     char *ciphertext_base64;
     const unsigned char *c = (const unsigned char *)ciphertext;
     Base64Encode(c, ciphertext_len, &ciphertext_base64);
+    printf("%s", ciphertext_base64);
 
     char *iv_base64;
     const unsigned char *iv_const = (const unsigned char *)iv;
@@ -118,10 +119,10 @@ int main (int argc, char **argv)
 
     size_t c_length = (size_t)strlen(ciphertext_base64);
     size_t iv_length = (size_t)strlen(iv_base64);
-    unsigned char withIV[c_length + iv_length + 3];
+    unsigned char withIV[c_length + iv_length + 2];
     memcpy(withIV, iv_base64, iv_length);
-    memcpy(withIV + iv_len, delimiter, 2);
-    memcpy(withIV + iv_len + 2, ciphertext_base64, c_length + 2);
+    memcpy(withIV + iv_length, delimiter, 1);
+    memcpy(withIV + iv_length + 1, ciphertext_base64, c_length + 1);
     printf("%s", withIV);
     printf("\n");
     printf("%d", ciphertext_len);
