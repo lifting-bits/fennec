@@ -61,15 +61,16 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 	int main (int argc, char **argv)
 	{
 		char *withIV = argv[1];
-		char iv_base64[17];
-		memcpy(iv_base64, withIV, 16);
-		iv_base64[16] = '\0';
+		char iv_base64[25];
+		memcpy(iv_base64, withIV, 24);
+		iv_base64[24] = '\0';
 
-		char *ciphertext_base64 = withIV + 17;
+		char *ciphertext_base64 = withIV + 25;
 		// char *ciphertext_base64 = "uVVOKngftfPXJiOviN4dxFC+2azy0y0k9DlzB6Kaeqb5U1VhVLcvYg8mtrTZbeq9SoMn0blatKWeGGOIMCj1ewN6eXr7eP8Btx8k69V0HfbB9iDfznQukvMNrRPmvVid3493z+8xrYBQSa0i/5g6mIohV4rjQ12K1eBwOAvaS+TvrZBpMjfXpxJh+6fyR8bgc/cHzMEbJRwaE8uKppSMGvQq2i1Svjknzecv+hUh4Sg=";
 		char *ciphertext_signed;
 		size_t ciphertext_len;
 		Base64Decode(ciphertext_base64, &ciphertext_signed, &ciphertext_len);
+
 		unsigned char *ciphertext = (unsigned char *)ciphertext_signed;
 
 		/* A 128 bit key */
