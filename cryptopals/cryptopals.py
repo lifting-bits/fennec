@@ -6,7 +6,7 @@ def encrypt(plaintext):
     p = subprocess.Popen(["./encrypt14", plaintext_b64], stdout=subprocess.PIPE)
     result = p.stdout.readlines()
     ciphertext_len = int(result[1])
-    ciphertext = base64.b64decode((result[0])[16:])
+    ciphertext = base64.b64decode(result[0])
     return [ciphertext, ciphertext_len]
 
 def blocksize():
