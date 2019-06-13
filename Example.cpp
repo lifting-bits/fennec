@@ -1,9 +1,7 @@
 #include "llvm/Pass.h"
 #include "llvm/IR/Function.h"
 #include "llvm/Support/raw_ostream.h"
-#include "llvm/IR/LegacyPassManager.h"
 #include "llvm/IR/InstrTypes.h"
-#include "llvm/Transforms/IPO/PassManagerBuilder.h"
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/Transforms/Utils/BasicBlockUtils.h"
 #include "llvm/IR/Module.h"
@@ -17,22 +15,23 @@ namespace {
     bool runOnFunction(Function &F) override {
       // Get the function to call from our runtime library.
       LLVMContext &Ctx = F.getContext();
-      std::vector<Type*> paramTypes = {Type::getInt32Ty(Ctx)};
-      Type *retType = Type::getVoidTy(Ctx);
-      FunctionType *logFuncType = FunctionType::get(retType, paramTypes, false);
+      Type *retType = Type::getInt32Ty(Ctx);
+      FunctionType *logFuncType = FunctionType::get(retType, false);
       FunctionCallee logFunc = F.getParent()->getOrInsertFunction("logop", logFuncType);
 
       for (auto &B : F) {
         for (auto &I : B) {
-          if (auto *op = dyn_cast<BinaryOperator>(&I)) {
+          if (auto *op = dyn_cast<ReturnInst>(&I)) {
             // Insert *after* `op`.
             IRBuilder<> builder(op);
-            builder.SetInsertPoint(&B, ++builder.GetInsertPoint());
+            // builder.SetInsertPoint(&B, ++builder.GetInsertPoint());
+            // Insert *before `op`.
+            builder.SetInsertPoint(&I);
 
             // Insert a call to our function.
-            Value* args[] = {op};
-            builder.CreateCall(logFunc, args);
-
+            Value* result = builder.CreateCall(logFunc);
+            errs() << "Hello \n" << result; 
+            // builder.CreateRet(result);
             return true;
           }
         }
