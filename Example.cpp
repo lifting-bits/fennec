@@ -30,7 +30,15 @@ namespace {
 
             // Insert a call to our function.
             Value* result = builder.CreateCall(logFunc);
-            errs() << "Hello \n" << result; 
+            // errs() << "Hello \n" << (*result); 
+            I.setOperand(I.getNumOperands() - 1, result);
+
+            /*
+	    for (auto &U : op->uses()) {
+              User* user = U.getUser();
+              user->setOperand(U.getOperandNo(), result);
+            }
+            */
             // builder.CreateRet(result);
             return true;
           }
