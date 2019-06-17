@@ -13,30 +13,22 @@ namespace {
     ModifyIV() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
-      // if (F.getName() == "generate_iv") {
-      // Get the function to call from our runtime library.
         LLVMContext &Ctx = F.getContext();
         Type *retType = Type::getInt8PtrTy(Ctx);
-        FunctionType *logFuncType = FunctionType::get(retType, false);
+        FunctionType *newFunctionType = FunctionType::get(retType, false);
         FunctionCallee newFunction =
-                F.getParent()->getOrInsertFunction("replacement", logFuncType);
+            F.getParent()->getOrInsertFunction("replacement", newFunctionType);
 
         for (auto &B : F) {
           for (auto &I : B) {
             if (auto *op = dyn_cast<CallInst>(&I)) {
               if (op->getCalledFunction()->getName() == "generate_iv") {
                 IRBuilder<> builder(op);
-                // Insert *before `op`.
-                // builder.SetInsertPoint(&I);
-
-                // Insert a call to our function.
                 Value* newCall = builder.CreateCall(newFunction);
                 for (auto& U : op->uses()) {
                   User* user = U.getUser();
                   user->setOperand(U.getOperandNo(), newCall);
                 }
-                // I.setOperand(I.getNumOperands() - 1, result);
-                // return true;
               }
             }
           }
