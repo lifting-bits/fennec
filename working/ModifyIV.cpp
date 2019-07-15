@@ -5,6 +5,9 @@
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/Transforms/Utils/BasicBlockUtils.h"
 #include "llvm/IR/Module.h"
+#include "llvm/IR/CallSite.h"
+#include <vector>
+
 using namespace llvm;
 
 namespace {
@@ -13,7 +16,7 @@ namespace {
     ModifyIV() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
-        LLVMContext &Ctx = F.getContext();
+        // LLVMContext &Ctx = F.getContext();
 
 /*
         StructType *newMemoryStruct = StructType::create(Ctx, "Memory");
@@ -23,7 +26,9 @@ namespace {
         Constant *newFunction =
             F.getParent()->getOrInsertFunction("replacement", newFunctionType);
 */
-        Constant *newFunction = NULL;
+        std::vector<Instruction *> dels;
+        dels.clear();
+        Function *newFunction = NULL;
         bool typeFound = false;
         for (auto &B : F) {
           for (auto &I : B) {
@@ -34,24 +39,42 @@ namespace {
                 auto name = function->getName();
                 if (name == "sub_400df0_generate_iv") {
       		  errs() << "found \n";
+
+                  // get return type of function
        	          if (typeFound == false) {	
        	            Type *retType = function->getReturnType();
-                    FunctionType *newFunctionType = FunctionType::get(retType, false);
+                    FunctionType *newFunctionType = FunctionType::get(retType, function->getFunctionType()->params(), false);
                     newFunction =
-                        F.getParent()->getOrInsertFunction("sub_400650_replacement", newFunctionType);
+                        (Function *)(F.getParent()->getOrInsertFunction("sub_400650_replacement", newFunctionType));
                     typeFound = true;
                   }
+
                   IRBuilder<> builder(op);
-                  Value* newCall = builder.CreateCall(newFunction);
+                  CallSite CS(&I);
+		  // CallSite::arg_iterator ait = CS.arg_begin(), aend = CS.arg_end();
+                  std::vector<Value *> arguments;
+                  for (unsigned int i = 0; i < CS.arg_size(); i++) {
+                    Value *arg = CS.getArgument(i);
+                    arguments.push_back(arg);
+                  }
+                    
+                  ArrayRef<Value *> argArray = ArrayRef<Value *>(arguments); 
+                  Value* newCall = builder.CreateCall(newFunction, argArray); //, ArrayRef<Value*>(arguments));
+                  // replace all calls to old function with calls to new function
                   for (auto& U : op->uses()) {
                     User* user = U.getUser();
 		    errs() << user << "\n";
 		    errs() << U.getOperandNo() << "\n";
                     user->setOperand(U.getOperandNo(), newCall);
                   }
+                  // I.eraseFromParent();
+                  dels.push_back(&I);
                 }
               }
             }
+          }
+          for (auto &I : dels) {
+            I->eraseFromParent();
           }
           return true;
         }
