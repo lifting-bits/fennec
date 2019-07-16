@@ -11,9 +11,9 @@
 using namespace llvm;
 
 namespace {
-  struct ModifyIV : public FunctionPass {
+  struct OriginalIV : public FunctionPass {
     static char ID;
-    ModifyIV() : FunctionPass(ID) {}
+    OriginalIV() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
         Function *newFunction = NULL;
@@ -26,14 +26,14 @@ namespace {
 	      auto function = op->getCalledFunction();
               if (function != NULL) {
                 auto name = function->getName();
-                if (name == "sub_400df0_generate_iv") {
+                if (name == "sub_400650_generate_iv_original") {
 
                   // get return type of function
-       	          if (typeFound == false) {
+       	          if (typeFound == false) {	
        	            Type *retType = function->getReturnType();
                     FunctionType *newFunctionType = FunctionType::get(retType, function->getFunctionType()->params(), false);
                     newFunction =
-                        (Function *)(F.getParent()->getOrInsertFunction("sub_4006b0_replacement", newFunctionType));
+                        (Function *)(F.getParent()->getOrInsertFunction("sub_400df0_generate_iv", newFunctionType));
                     typeFound = true;
                   }
 
@@ -44,8 +44,8 @@ namespace {
                     Value *arg = CS.getArgument(i);
                     arguments.push_back(arg);
                   }
-
-                  ArrayRef<Value *> argArray = ArrayRef<Value *>(arguments);
+                  
+                  ArrayRef<Value *> argArray = ArrayRef<Value *>(arguments); 
                   Value* newCall = builder.CreateCall(newFunction, argArray); //, ArrayRef<Value*>(arguments));
                   // replace all calls to old function with calls to new function
                   for (auto& U : op->uses()) {
@@ -69,5 +69,5 @@ namespace {
   };
 }
 
-char ModifyIV::ID = 0;
-static RegisterPass<ModifyIV> X("modifyIV", "ModifyIV Pass", false, false);
+char OriginalIV::ID = 0;
+static RegisterPass<OriginalIV> X("originalIV", "OriginalIV Pass", false, false);
