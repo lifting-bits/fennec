@@ -1,21 +1,12 @@
 #!/bin/bash
 
-echo Path to original binary?
-read original
-echo Path to replacement binary?
-read replacement
-echo Function to replace?
-read originalFunction
-echo New function?
-read newFunction
-
-echo Path to remill-build directory?
-read remillPath
-echo Path to llvm/build?
-read llvmPath
-
-echo Compilation flags?
-read flags
+remillPath=$1
+llvmPath=$2
+original=$3
+replacement=$4
+originalFunction=$5
+newFunction=$6
+flags=$7
 
 # lifting
 mcsema-disass --disassembler /home/artem/ida-6.9/idal64 --os linux --arch amd64 --output "$original".cfg --binary "$original" --entrypoint main --log_file "$original".log
