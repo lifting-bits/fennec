@@ -2,26 +2,18 @@
 
 remillPath=$1
 llvmPath=$2
-original=$3
-replacement=$4
-originalFunction=$5
-newFunction=$6
-flags=$7
+idaPath=$3
+original=$4
+replacement=$5
+originalFunction=$6
+newFunction=$7
+flags=$8
 
 # lifting
-mcsema-disass --disassembler /home/artem/ida-6.9/idal64 --os linux --arch amd64 --output "$original".cfg --binary "$original" --entrypoint main --log_file "$original".log
+mcsema-disass --disassembler $idaPath --os linux --arch amd64 --output "$original".cfg --binary "$original" --entrypoint main --log_file "$original".log
 mcsema-lift-4.0 --arch amd64 --os linux --cfg "$original".cfg --output "$original".bc
-mcsema-disass --disassembler /home/artem/ida-6.9/idal64 --os linux --arch amd64 --output "$replacement".cfg --binary "$replacement" --entrypoint main --log_file "$replacement".log
+mcsema-disass --disassembler $idaPath --os linux --arch amd64 --output "$replacement".cfg --binary "$replacement" --entrypoint main --log_file "$replacement".log
 mcsema-lift-4.0 --arch amd64 --os linux --cfg "$replacement".cfg --output "$replacement".bc
-
-# recording all paths
-path1=$(pwd)
-cd $remillPath/libraries/llvm/bin
-mcsemaPath=$(pwd)
-cd -
-cd $llvmPath
-passPath=$(pwd)
-cd $path1
 
 # finding names of functions and removing "internal"
 ./$remillPath/libraries/llvm/bin/llvm-dis $replacement.bc
