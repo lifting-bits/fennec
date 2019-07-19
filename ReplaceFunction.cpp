@@ -39,10 +39,11 @@ namespace {
                   // get type of function and create new replacement function
        	          if (typeFound == false) {
        	            Type *retType = function->getReturnType();
-                    FunctionType *newFunctionType = FunctionType::get(retType, function->getFunctionType()->params(), false);
+                    FunctionType *newFunctionType =
+                      FunctionType::get(retType, function->getFunctionType()->params(), false);
                     // create new function
                     newFunction =
-                        (Function *)(F.getParent()->getOrInsertFunction(ReplacementFunction, newFunctionType));
+                      (Function *)(F.getParent()->getOrInsertFunction(ReplacementFunction, newFunctionType));
                     typeFound = true;
                   }
 
