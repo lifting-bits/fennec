@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# MODE 2
+# use this mode if you wish to keep a copy of the original function and
+# use it within your replacement
+# for example, if you want to check a certain characteristic of the original
+# function, and replace it only if it meets a particular condition, this mode
+# will allow you to call the original function from your replacement
+
 remillPath=$1 # path to remill-build directory in copy of McSema
 llvmPath=$2 # path to build directory in copy of LLVM
 idaPath=$3 # path to copy of IDA

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# MODE 1
+# use this mode if you have no use for the original function and want to replace
+# it no matter what
+# this will perform a single function replacement
+
 remillPath=$1 # path to remill-build directory in copy of McSema
 llvmPath=$2 # path to build directory in copy of LLVM
 idaPath=$3 # path to copy of IDA
