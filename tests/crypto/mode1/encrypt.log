@@ -1,0 +1,1178 @@
+Debugging is enabled.
+Loading Standard Definitions file: /home/aditi/mcsema-2.0.0-ve/env/bin/lib/python2.7/site-packages/mcsema_disass-2.0-py2.7.egg/mcsema_disass/defs/linux.txt
+Not treating encrypt as external, it is defined at 400d00
+Using Batch mode.
+Starting analysis
+Recovering module encrypt
+Looking for instructions in segment .init
+  Default block heads for function 400a38 with loose bounds [400a38, 400a52)
+    block [400a38, 400a48)
+    block [400a48, 400a4d)
+    block [400a4d, 400a52)
+    chunk [400a38, 400a52)
+Looking for instructions in segment .plt
+  Default block heads for function 400a70 with loose bounds [400a70, 400a76)
+    block [400a70, 400a76)
+    chunk [400a70, 400a76)
+  Default block heads for function 400a80 with loose bounds [400a80, 400a86)
+    block [400a80, 400a86)
+    chunk [400a80, 400a86)
+  Default block heads for function 400a90 with loose bounds [400a90, 400a96)
+    block [400a90, 400a96)
+    chunk [400a90, 400a96)
+  Default block heads for function 400aa0 with loose bounds [400aa0, 400aa6)
+    block [400aa0, 400aa6)
+    chunk [400aa0, 400aa6)
+  Default block heads for function 400ab0 with loose bounds [400ab0, 400ab6)
+    block [400ab0, 400ab6)
+    chunk [400ab0, 400ab6)
+  Default block heads for function 400ac0 with loose bounds [400ac0, 400ac6)
+    block [400ac0, 400ac6)
+    chunk [400ac0, 400ac6)
+  Default block heads for function 400ad0 with loose bounds [400ad0, 400ad6)
+    block [400ad0, 400ad6)
+    chunk [400ad0, 400ad6)
+  Default block heads for function 400ae0 with loose bounds [400ae0, 400ae6)
+    block [400ae0, 400ae6)
+    chunk [400ae0, 400ae6)
+  Default block heads for function 400af0 with loose bounds [400af0, 400af6)
+    block [400af0, 400af6)
+    chunk [400af0, 400af6)
+  Default block heads for function 400b00 with loose bounds [400b00, 400b06)
+    block [400b00, 400b06)
+    chunk [400b00, 400b06)
+  Default block heads for function 400b10 with loose bounds [400b10, 400b16)
+    block [400b10, 400b16)
+    chunk [400b10, 400b16)
+  Default block heads for function 400b20 with loose bounds [400b20, 400b26)
+    block [400b20, 400b26)
+    chunk [400b20, 400b26)
+  Default block heads for function 400b30 with loose bounds [400b30, 400b36)
+    block [400b30, 400b36)
+    chunk [400b30, 400b36)
+  Default block heads for function 400b40 with loose bounds [400b40, 400b46)
+    block [400b40, 400b46)
+    chunk [400b40, 400b46)
+  Default block heads for function 400b50 with loose bounds [400b50, 400b56)
+    block [400b50, 400b56)
+    chunk [400b50, 400b56)
+  Default block heads for function 400b60 with loose bounds [400b60, 400b66)
+    block [400b60, 400b66)
+    chunk [400b60, 400b66)
+  Default block heads for function 400b70 with loose bounds [400b70, 400b76)
+    block [400b70, 400b76)
+    chunk [400b70, 400b76)
+  Default block heads for function 400b80 with loose bounds [400b80, 400b86)
+    block [400b80, 400b86)
+    chunk [400b80, 400b86)
+  Default block heads for function 400b90 with loose bounds [400b90, 400b96)
+    block [400b90, 400b96)
+    chunk [400b90, 400b96)
+  Default block heads for function 400ba0 with loose bounds [400ba0, 400ba6)
+    block [400ba0, 400ba6)
+    chunk [400ba0, 400ba6)
+  Default block heads for function 400bb0 with loose bounds [400bb0, 400bb6)
+    block [400bb0, 400bb6)
+    chunk [400bb0, 400bb6)
+  Default block heads for function 400bc0 with loose bounds [400bc0, 400bc6)
+    block [400bc0, 400bc6)
+    chunk [400bc0, 400bc6)
+  Default block heads for function 400bd0 with loose bounds [400bd0, 400bd6)
+    block [400bd0, 400bd6)
+    chunk [400bd0, 400bd6)
+  Default block heads for function 400be0 with loose bounds [400be0, 400be6)
+    block [400be0, 400be6)
+    chunk [400be0, 400be6)
+Looking for instructions in segment .plt.got
+  Default block heads for function 400bf0 with loose bounds [400bf0, 400bf6)
+    block [400bf0, 400bf6)
+    chunk [400bf0, 400bf6)
+Looking for instructions in segment .text
+  Default block heads for function 400c00 with loose bounds [400c00, 400c2a)
+    block [400c00, 400c2a)
+    chunk [400c00, 400c2a)
+  Default block heads for function 400c30 with loose bounds [400c30, 400c5a)
+    block [400c30, 400c41)
+    block [400c41, 400c4b)
+    block [400c4b, 400c53)
+    block [400c58, 400c5a)
+    chunk [400c30, 400c5a)
+  Default block heads for function 400c60 with loose bounds [400c60, 400c9a)
+    block [400c60, 400c83)
+    block [400c83, 400c8d)
+    block [400c8d, 400c95)
+    block [400c98, 400c9a)
+    chunk [400c60, 400c9a)
+  Default block heads for function 400ca0 with loose bounds [400ca0, 400cc2)
+    block [400ca0, 400ca9)
+    block [400ca9, 400cbb)
+    block [400cc0, 400cc2)
+    chunk [400ca0, 400cc2)
+  Default block heads for function 400cd0 with loose bounds [400cd0, 400cd7)
+    block [400cd0, 400cd7)
+    chunk [400cd0, 400cd7)
+  Default block heads for function 400ce0 with loose bounds [400ce0, 400cf6)
+    block [400ce0, 400cf6)
+    chunk [400ce0, 400cf6)
+  Default block heads for function 400d00 with loose bounds [400d00, 400de9)
+    block [400d00, 400d2e)
+    block [400d2e, 400d33)
+    block [400d33, 400d67)
+    block [400d67, 400d6c)
+    block [400d6c, 400d94)
+    block [400d94, 400d99)
+    block [400d99, 400dc9)
+    block [400dc9, 400dce)
+    block [400dce, 400de9)
+    chunk [400d00, 400de9)
+  Default block heads for function 400df0 with loose bounds [400df0, 400e00)
+    block [400df0, 400e00)
+    chunk [400df0, 400e00)
+  Default block heads for function 400e00 with loose bounds [400e00, 40111c)
+    block [400e00, 40111c)
+    chunk [400e00, 40111c)
+  Default block heads for function 401120 with loose bounds [401120, 401209)
+    block [401120, 401209)
+    chunk [401120, 401209)
+  Default block heads for function 401210 with loose bounds [401210, 4012a9)
+    block [401210, 40124a)
+    block [40124a, 401263)
+    block [401263, 401270)
+    block [401270, 401289)
+    block [401289, 401291)
+    block [401291, 401296)
+    block [401296, 4012a9)
+    chunk [401210, 4012a9)
+  Default block heads for function 4012b0 with loose bounds [4012b0, 4013c4)
+    block [4012b0, 401386)
+    block [401386, 40138b)
+    block [40138b, 4013b3)
+    block [4013b3, 4013c4)
+    chunk [4012b0, 4013c4)
+  Default block heads for function 4013d0 with loose bounds [4013d0, 401435)
+    block [4013d0, 401406)
+    block [401406, 401410)
+    block [401410, 401426)
+    block [401426, 401435)
+    chunk [4013d0, 401435)
+  Default block heads for function 401440 with loose bounds [401440, 401442)
+    block [401440, 401442)
+    chunk [401440, 401442)
+Looking for instructions in segment .fini
+  Default block heads for function 401444 with loose bounds [401444, 40144d)
+    block [401444, 40144d)
+    chunk [401444, 40144d)
+Looking for strings in segment .rodata [401450, 4015da)
+  Found string '0123456789012345' of length 17 at 401454, jumping to 401465
+  Found string '16807282475249162265007398494365' of length 33 at 401465, jumping to 401486
+  Found string '/' of length 2 at 401486, jumping to 401488
+  Found string '0b039286d997a33c9e463b296e4dc7be4c666390cc85' of length 45 at 401488, jumping to 4014b5
+  Found string 'Um9sbGluJyBpbiBteSA1LjAKV2l0aCBteSByYWctdG9wIGRvd24gc28gbXkgaGFpciBjYW4gYmxvdwpUaGUgZ2lybGllcyBvbiBzdGFuZGJ5IHdhdmluZyBqdXN0IHRvIHNheSBoaQpEaWQgeW91IHN0b3A/IE5vLCBJIGp1c3QgZHJvdmUgYnkK' of length 185 at 4014b5, jumping to 40156e
+  Found string '%s' of length 3 at 40156e, jumping to 401571
+  Found string '\n' of length 2 at 401571, jumping to 401573
+  Found string '%d' of length 3 at 401573, jumping to 401576
+  Found string '*length == decodeLen' of length 21 at 401576, jumping to 40158b
+  Found string '/home/aditi/ToB-new/base64decode.c' of length 35 at 40158b, jumping to 4015ae
+  Found string 'int Base64Decode(char *, char **, size_t *)' of length 44 at 4015ae, jumping to 4015da
+Looking for strings in segment .eh_frame_hdr [4015dc, 401640)
+Looking for strings in segment .eh_frame [401640, 4017f4)
+Looking for strings in segment .init_array [601e08, 601e10)
+Looking for strings in segment .fini_array [601e10, 601e18)
+Looking for strings in segment .got [601ff8, 602000)
+Looking for strings in segment .got.plt [602000, 6020d8)
+Looking for strings in segment .data [6020d8, 6020e8)
+Looking for strings in segment .bss [602100, 602110)
+Looking for strings in segment extern [602110, 6022a8)
+Looking for cross-references in segment .init [400a38, 400a52)
+Looking for cross-references in segment .plt [400a60, 400bf0)
+  Stopping scan at 400a6c
+  Stopping scan at 400a7c
+  Stopping scan at 400a8c
+  Stopping scan at 400a9c
+  Stopping scan at 400aac
+  Stopping scan at 400abc
+  Stopping scan at 400acc
+  Stopping scan at 400adc
+  Stopping scan at 400aec
+  Stopping scan at 400afc
+  Stopping scan at 400b0c
+  Stopping scan at 400b1c
+  Stopping scan at 400b2c
+  Stopping scan at 400b3c
+  Stopping scan at 400b4c
+  Stopping scan at 400b5c
+  Stopping scan at 400b6c
+  Stopping scan at 400b7c
+  Stopping scan at 400b8c
+  Stopping scan at 400b9c
+  Stopping scan at 400bac
+  Stopping scan at 400bbc
+  Stopping scan at 400bcc
+  Stopping scan at 400bdc
+  Stopping scan at 400bec
+Looking for cross-references in segment .plt.got [400bf0, 400bf8)
+  Stopping scan at 400bf8
+Looking for cross-references in segment .text [400c00, 401442)
+  Stopping scan at 400c2c
+  Stopping scan at 400c54
+  Stopping scan at 400c5c
+  Stopping scan at ffffffffffffffff
+  Stopping scan at 400c9c
+  Stopping scan at 400cbc
+  Stopping scan at 400ccc
+  Stopping scan at 400cdc
+  Stopping scan at 400cfc
+  Stopping scan at 400dec
+  Stopping scan at 40111c
+  Stopping scan at 40120c
+  Stopping scan at 4012ac
+  Stopping scan at 4013cc
+  Stopping scan at 40143c
+Looking for cross-references in segment .fini [401444, 40144d)
+Looking for cross-references in segment .rodata [401450, 4015da)
+  Found string at 401454, jumping to 401465
+  Found string at 401465, jumping to 401486
+  Found string at 401486, jumping to 401488
+  Found string at 401488, jumping to 4014b5
+  Found string at 4014b5, jumping to 40156e
+  Found string at 40156e, jumping to 401571
+  Found string at 401571, jumping to 401573
+  Found string at 401573, jumping to 401576
+  Found string at 401576, jumping to 40158b
+  Found string at 40158b, jumping to 4015ae
+  Found string at 4015ae, jumping to 4015da
+  Stopping scan at 4015ae
+Looking for cross-references in segment .eh_frame_hdr [4015dc, 401640)
+  Stopping scan at 40163c
+Looking for cross-references in segment .eh_frame [401640, 4017f4)
+  Stopping scan at 4017f0
+Looking for cross-references in segment .init_array [601e08, 601e10)
+  Adding qword reference from 601e08 to 400cd0
+  Stopping scan at 601e08
+Looking for cross-references in segment .fini_array [601e10, 601e18)
+  Adding qword reference from 601e10 to 400ca0
+  Stopping scan at 601e10
+Looking for cross-references in segment .got [601ff8, 602000)
+  Adding qword reference from 601ff8 to 602290
+  Stopping scan at 601ff8
+Looking for cross-references in segment .got.plt [602000, 6020d8)
+  Adding qword reference from 602018 to 6021d0
+  Adding qword reference from 602020 to 6021d8
+  Adding qword reference from 602028 to 6021e0
+  Adding qword reference from 602030 to 6021e8
+  Adding qword reference from 602038 to 6021f0
+  Adding qword reference from 602040 to 6021f8
+  Adding qword reference from 602048 to 602200
+  Adding qword reference from 602050 to 602208
+  Adding qword reference from 602058 to 602210
+  Adding qword reference from 602060 to 602218
+  Adding qword reference from 602068 to 602220
+  Adding qword reference from 602070 to 602228
+  Adding qword reference from 602078 to 602230
+  Adding qword reference from 602080 to 602238
+  Adding qword reference from 602088 to 602240
+  Adding qword reference from 602090 to 602248
+  Adding qword reference from 602098 to 602250
+  Adding qword reference from 6020a0 to 602258
+  Adding qword reference from 6020a8 to 602260
+  Adding qword reference from 6020b0 to 602268
+  Adding qword reference from 6020b8 to 602270
+  Adding qword reference from 6020c0 to 602278
+  Adding qword reference from 6020c8 to 602280
+  Adding qword reference from 6020d0 to 602288
+  Stopping scan at 6020d0
+Looking for cross-references in segment .data [6020d8, 6020e8)
+  Stopping scan at 6020e4
+Looking for cross-references in segment .bss [602100, 602110)
+  Stopping scan at 60210c
+Looking for cross-references in segment extern [602110, 6022a8)
+  Stopping scan at 6022a4
+Looking for thunks
+  Found thunk for abort targeting 6021d8 at 400a80
+  Found thunk for BIO_ctrl targeting 602258 at 400b80
+  Found thunk for off_601FF8 targeting 601ff8 at 400bf0
+  Found thunk for EVP_aes_256_cbc targeting 602260 at 400b90
+  Found thunk for BIO_s_mem targeting 602208 at 400ae0
+  Found thunk for BIO_new_mem_buf targeting 602228 at 400b20
+  Found thunk for EVP_CIPHER_CTX_new targeting 6021e8 at 400aa0
+  Found thunk for printf targeting 6021d0 at 400a70
+  Found thunk for memcpy targeting 602288 at 400be0
+  Found thunk for BIO_new targeting 602270 at 400bb0
+  Found thunk for __assert_fail targeting 6021e0 at 400a90
+  Found thunk for BIO_f_base64 targeting 602220 at 400b10
+  Found thunk for EVP_EncryptFinal_ex targeting 602238 at 400b40
+  Found thunk for BIO_read targeting 602268 at 400ba0
+  Found thunk for EVP_EncryptInit_ex targeting 602280 at 400bd0
+  Found thunk for BIO_set_flags targeting 602200 at 400ad0
+  Found thunk for __libc_start_main targeting 6021f8 at 400ac0
+  Found thunk for BIO_push targeting 602218 at 400b00
+  Found thunk for EVP_EncryptUpdate targeting 602248 at 400b60
+  Found thunk for BIO_write targeting 602240 at 400b50
+  Found thunk for EVP_CIPHER_CTX_free targeting 602278 at 400bc0
+  Found thunk for ERR_print_errors_fp targeting 602250 at 400b70
+  Found thunk for malloc targeting 6021f0 at 400ab0
+  Found thunk for BIO_free_all targeting 602210 at 400af0
+  Found thunk for strlen targeting 602230 at 400b30
+Looking for external symbols
+  Function at 400a70 is the external function printf
+  Function at 400a80 is the external function abort
+  Function at 400a90 is the external function __assert_fail
+  Function at 400aa0 is the external function EVP_CIPHER_CTX_new
+  Function at 400ab0 is the external function malloc
+  Function at 400ac0 is the external function __libc_start_main
+  Function at 400ad0 is the external function BIO_set_flags
+  Function at 400ae0 is the external function BIO_s_mem
+  Function at 400af0 is the external function BIO_free_all
+  Function at 400b00 is the external function BIO_push
+  Function at 400b10 is the external function BIO_f_base64
+  Function at 400b20 is the external function BIO_new_mem_buf
+  Function at 400b30 is the external function strlen
+  Function at 400b40 is the external function EVP_EncryptFinal_ex
+  Function at 400b50 is the external function BIO_write
+  Function at 400b60 is the external function EVP_EncryptUpdate
+  Function at 400b70 is the external function ERR_print_errors_fp
+  Function at 400b80 is the external function BIO_ctrl
+  Function at 400b90 is the external function EVP_aes_256_cbc
+  Function at 400ba0 is the external function BIO_read
+  Function at 400bb0 is the external function BIO_new
+  Function at 400bc0 is the external function EVP_CIPHER_CTX_free
+  Function at 400bd0 is the external function EVP_EncryptInit_ex
+  Function at 400be0 is the external function memcpy
+  True name of stderr@@GLIBC_2.2.5 is stderr
+  Variable at 602100 is the external stderr
+  True name of printf@@GLIBC_2.2.5 is printf
+  Function at 602110 is the external function printf
+  True name of abort@@GLIBC_2.2.5 is abort
+  Function at 602118 is the external function abort
+  True name of __assert_fail@@GLIBC_2.2.5 is __assert_fail
+  Function at 602120 is the external function __assert_fail
+  WARNING: Adding variable EVP_CIPHER_CTX_new@@OPENSSL_1.0.0 at 602128 as external
+  True name of malloc@@GLIBC_2.2.5 is malloc
+  Function at 602130 is the external function malloc
+  True name of __libc_start_main@@GLIBC_2.2.5 is __libc_start_main
+  Function at 602138 is the external function __libc_start_main
+  WARNING: Adding variable BIO_set_flags@@OPENSSL_1.0.0 at 602140 as external
+  WARNING: Adding variable BIO_s_mem@@OPENSSL_1.0.0 at 602148 as external
+  WARNING: Adding variable BIO_free_all@@OPENSSL_1.0.0 at 602150 as external
+  WARNING: Adding variable BIO_push@@OPENSSL_1.0.0 at 602158 as external
+  WARNING: Adding variable BIO_f_base64@@OPENSSL_1.0.0 at 602160 as external
+  WARNING: Adding variable BIO_new_mem_buf@@OPENSSL_1.0.0 at 602168 as external
+  True name of strlen@@GLIBC_2.2.5 is strlen
+  Function at 602170 is the external function strlen
+  WARNING: Adding variable EVP_EncryptFinal_ex@@OPENSSL_1.0.0 at 602178 as external
+  WARNING: Adding variable BIO_write@@OPENSSL_1.0.0 at 602180 as external
+  WARNING: Adding variable EVP_EncryptUpdate@@OPENSSL_1.0.0 at 602188 as external
+  WARNING: Adding variable ERR_print_errors_fp@@OPENSSL_1.0.0 at 602190 as external
+  WARNING: Adding variable BIO_ctrl@@OPENSSL_1.0.0 at 602198 as external
+  WARNING: Adding variable EVP_aes_256_cbc@@OPENSSL_1.0.0 at 6021a0 as external
+  WARNING: Adding variable BIO_read@@OPENSSL_1.0.0 at 6021a8 as external
+  WARNING: Adding variable BIO_new@@OPENSSL_1.0.0 at 6021b0 as external
+  WARNING: Adding variable EVP_CIPHER_CTX_free@@OPENSSL_1.0.0 at 6021b8 as external
+  WARNING: Adding variable EVP_EncryptInit_ex@@OPENSSL_1.0.0 at 6021c0 as external
+  True name of memcpy@@GLIBC_2.14 is memcpy
+  Function at 6021c8 is the external function memcpy
+  Function at 6021d0 is the external function printf
+  Function at 6021d8 is the external function abort
+  Function at 6021e0 is the external function __assert_fail
+  Function at 6021e8 is the external function EVP_CIPHER_CTX_new
+  Function at 6021f0 is the external function malloc
+  Function at 6021f8 is the external function __libc_start_main
+  Function at 602200 is the external function BIO_set_flags
+  Function at 602208 is the external function BIO_s_mem
+  Function at 602210 is the external function BIO_free_all
+  Function at 602218 is the external function BIO_push
+  Function at 602220 is the external function BIO_f_base64
+  Function at 602228 is the external function BIO_new_mem_buf
+  Function at 602230 is the external function strlen
+  Function at 602238 is the external function EVP_EncryptFinal_ex
+  Function at 602240 is the external function BIO_write
+  Function at 602248 is the external function EVP_EncryptUpdate
+  Function at 602250 is the external function ERR_print_errors_fp
+  Function at 602258 is the external function BIO_ctrl
+  Function at 602260 is the external function EVP_aes_256_cbc
+  Function at 602268 is the external function BIO_read
+  Function at 602270 is the external function BIO_new
+  Function at 602278 is the external function EVP_CIPHER_CTX_free
+  Function at 602280 is the external function EVP_EncryptInit_ex
+  Function at 602288 is the external function memcpy
+  Function at 602290 is the external function __gmon_start__
+Looking for entrypoints
+Recovering __libc_csu_init at 4013d0
+  Analysing subroutine __libc_csu_init at 4013d0
+  Subroutine __libc_csu_init at 4013d0 has 4 blocks
+  BB: 4013d0 in func 4013d0 with 17 insts
+    I: 4013d0
+    I: 4013d2
+    I: 4013d4
+    I: 4013d7
+    I: 4013d9
+    I: 4013db (data mem internal 601e08 __frame_dummy_init_array_entry)
+    I: 4013e2
+    I: 4013e3 (data mem internal 601e10 __do_global_dtors_aux_fini_array_entry)
+    I: 4013ea
+    I: 4013eb
+    I: 4013ee
+    I: 4013f1
+    I: 4013f4
+    I: 4013f8
+    I: 4013fc (code flow internal 400a38 .init_proc)
+    I: 401401
+    I: 401404 (code flow internal 401426 )
+      Successors: 401426, 401406
+  BB: 401410 in func 4013d0 with 7 insts
+    I: 401410
+    I: 401413
+    I: 401416
+    I: 401419
+    I: 40141d
+    I: 401421
+    I: 401424 (code flow internal 401410 )
+      Successors: 401410, 401426
+  BB: 401406 in func 4013d0 with 2 insts
+    I: 401406
+    I: 401408
+      Successors: 401410
+  BB: 401426 in func 4013d0 with 8 insts
+    I: 401426
+    I: 40142a
+    I: 40142b
+    I: 40142c
+    I: 40142e
+    I: 401430
+    I: 401432
+    I: 401434
+      No successors
+Recovering __gmon_start__ at 400bf0
+  Analysing subroutine __gmon_start__ at 400bf0
+  Subroutine __gmon_start__ at 400bf0 has 1 blocks
+  BB: 400bf0 in func 400bf0 with 1 insts
+    I: 400bf0 (data mem internal 601ff8 )
+      No successors
+Recovering deregister_tm_clones at 400c30
+  Analysing subroutine deregister_tm_clones at 400c30
+  Subroutine deregister_tm_clones at 400c30 has 4 blocks
+  BB: 400c30 in func 400c30 with 5 insts
+    I: 400c30
+    I: 400c31
+    I: 400c36
+    I: 400c3c
+    I: 400c3f (code flow internal 400c58 )
+      Successors: 400c58, 400c41
+  BB: 400c41 in func 400c30 with 3 insts
+    I: 400c41
+    I: 400c46
+    I: 400c49 (code flow internal 400c58 )
+      Successors: 400c58, 400c4b
+  BB: 400c4b in func 400c30 with 3 insts
+    I: 400c4b
+    I: 400c4c
+    I: 400c51
+      No successors
+  BB: 400c58 in func 400c30 with 2 insts
+    I: 400c58
+    I: 400c59
+      No successors
+Recovering generate_iv at 400df0
+  Analysing subroutine generate_iv at 400df0
+  Subroutine generate_iv at 400df0 has 1 blocks
+  BB: 400df0 in func 400df0 with 5 insts
+    I: 400df0
+    I: 400df1
+    I: 400df4 (data imm internal 401454 a01234567890123)
+    I: 400dfe
+    I: 400dff
+      No successors
+Recovering .term_proc at 401444
+  Analysing subroutine .term_proc at 401444
+  Subroutine .term_proc at 401444 has 1 blocks
+  BB: 401444 in func 401444 with 3 insts
+    I: 401444
+    I: 401448
+    I: 40144c
+      No successors
+Recovering __libc_csu_fini at 401440
+  Analysing subroutine __libc_csu_fini at 401440
+  Subroutine __libc_csu_fini at 401440 has 1 blocks
+  BB: 401440 in func 401440 with 1 insts
+    I: 401440
+      No successors
+Recovering register_tm_clones at 400c60
+  Analysing subroutine register_tm_clones at 400c60
+  Subroutine register_tm_clones at 400c60 has 4 blocks
+  BB: 400c60 in func 400c60 with 10 insts
+    I: 400c60
+    I: 400c65
+    I: 400c66
+    I: 400c6d
+    I: 400c70
+    I: 400c74
+    I: 400c77
+    I: 400c7b
+    I: 400c7e
+    I: 400c81 (code flow internal 400c98 )
+      Successors: 400c98, 400c83
+  BB: 400c98 in func 400c60 with 2 insts
+    I: 400c98
+    I: 400c99
+      No successors
+  BB: 400c83 in func 400c60 with 3 insts
+    I: 400c83
+    I: 400c88
+    I: 400c8b (code flow internal 400c98 )
+      Successors: 400c98, 400c8d
+  BB: 400c8d in func 400c60 with 3 insts
+    I: 400c8d
+    I: 400c8e
+    I: 400c93
+      No successors
+Recovering __do_global_dtors_aux at 400ca0
+  Analysing subroutine __do_global_dtors_aux at 400ca0
+  Subroutine __do_global_dtors_aux at 400ca0 has 3 blocks
+  BB: 400ca0 in func 400ca0 with 2 insts
+    I: 400ca0 (data mem internal 602108 completed.7632)
+    I: 400ca7 (code flow internal 400cc0 )
+      Successors: 400cc0, 400ca9
+  BB: 400ca9 in func 400ca0 with 6 insts
+    I: 400ca9
+    I: 400caa
+    I: 400cad (code flow internal 400c30 deregister_tm_clones)
+    I: 400cb2 (data mem internal 602108 completed.7632)
+    I: 400cb9
+    I: 400cba
+      No successors
+  BB: 400cc0 in func 400ca0 with 1 insts
+    I: 400cc0
+      No successors
+Recovering handleErrors at 400ce0
+  Analysing subroutine handleErrors at 400ce0
+  Subroutine handleErrors at 400ce0 has 1 blocks
+  BB: 400ce0 in func 400ce0 with 6 insts
+    I: 400ce0
+    I: 400ce1
+    I: 400ce4 (data mem external 602100 stderr)
+    I: 400cec (data flow external 602250 ERR_print_errors_fp)
+    I: 400cf1 (data flow external 6021d8 abort)
+    I: 400cf6
+      Successors: 400d00
+Recovering .init_proc at 400a38
+  Analysing subroutine .init_proc at 400a38
+  Subroutine .init_proc at 400a38 has 3 blocks
+  BB: 400a38 in func 400a38 with 4 insts
+    I: 400a38
+    I: 400a3c (data mem internal 601ff8 )
+    I: 400a43
+    I: 400a46 (code flow internal 400a4d )
+      Successors: 400a48, 400a4d
+  BB: 400a48 in func 400a38 with 1 insts
+    I: 400a48 (data flow internal 601ff8 off_601FF8)
+      Successors: 400a4d
+  BB: 400a4d in func 400a38 with 2 insts
+    I: 400a4d
+    I: 400a51
+      No successors
+Recovering Base64Decode at 4012b0
+  Analysing subroutine Base64Decode at 4012b0
+  Subroutine Base64Decode at 4012b0 has 4 blocks
+  BB: 4012b0 in func 4012b0 with 56 insts
+    I: 4012b0
+    I: 4012b1
+    I: 4012b4
+    I: 4012b8
+    I: 4012bc
+    I: 4012c0
+    I: 4012c4
+    I: 4012c8 (code flow internal 401210 calcDecodeLength)
+    I: 4012cd
+    I: 4012cf
+    I: 4012d2
+    I: 4012d5
+    I: 4012d8
+    I: 4012db (data flow external 6021f0 malloc)
+    I: 4012e0
+    I: 4012e5
+    I: 4012e9
+    I: 4012ec
+    I: 4012f0
+    I: 4012f4
+    I: 4012f7
+    I: 4012fb
+    I: 4012ff (data flow external 602228 BIO_new_mem_buf)
+    I: 401304
+    I: 401308 (data flow external 602220 BIO_f_base64)
+    I: 40130d
+    I: 401310 (data flow external 602270 BIO_new)
+    I: 401315
+    I: 401319
+    I: 40131d
+    I: 401321 (data flow external 602218 BIO_push)
+    I: 401326
+    I: 40132b
+    I: 40132f
+    I: 401333 (data flow external 602200 BIO_set_flags)
+    I: 401338
+    I: 40133c
+    I: 401340
+    I: 401343
+    I: 401347
+    I: 40134b
+    I: 40134e
+    I: 401352 (data flow external 602230 strlen)
+    I: 401357
+    I: 401359
+    I: 40135d
+    I: 401361
+    I: 401363 (data flow external 602268 BIO_read)
+    I: 401368
+    I: 40136b
+    I: 40136f
+    I: 401372
+    I: 401376
+    I: 401379
+    I: 40137d
+    I: 401380 (code flow internal 40138b )
+      Successors: 40138b, 401386
+  BB: 40138b in func 4012b0 with 5 insts
+    I: 40138b (data imm internal 401576 assertion)
+    I: 401395 (data imm internal 40158b file)
+    I: 40139f
+    I: 4013a4 (data imm internal 4015ae function)
+    I: 4013ae (data flow external 6021e0 __assert_fail)
+      Does not return
+  BB: 4013b3 in func 4012b0 with 6 insts
+    I: 4013b3
+    I: 4013b7 (data flow external 602210 BIO_free_all)
+    I: 4013bc
+    I: 4013be
+    I: 4013c2
+    I: 4013c3
+      No successors
+  BB: 401386 in func 4012b0 with 1 insts
+    I: 401386 (code flow internal 4013b3 )
+      Successors: 4013b3
+Recovering frame_dummy at 400cd0
+  Analysing subroutine frame_dummy at 400cd0
+  Subroutine frame_dummy at 400cd0 has 1 blocks
+  BB: 400cd0 in func 400cd0 with 4 insts
+    I: 400cd0
+    I: 400cd1
+    I: 400cd4
+    I: 400cd5 (code flow internal 400c60 register_tm_clones)
+      Successors: 400c60
+Recovering Base64Encode at 401120
+  Analysing subroutine Base64Encode at 401120
+  Subroutine Base64Encode at 401120 has 1 blocks
+  BB: 401120 in func 401120 with 62 insts
+    I: 401120
+    I: 401121
+    I: 401124
+    I: 401128
+    I: 40112c
+    I: 401130
+    I: 401134 (data flow external 602220 BIO_f_base64)
+    I: 401139
+    I: 40113c (data flow external 602270 BIO_new)
+    I: 401141
+    I: 401145 (data flow external 602208 BIO_s_mem)
+    I: 40114a
+    I: 40114d (data flow external 602270 BIO_new)
+    I: 401152
+    I: 401156
+    I: 40115a
+    I: 40115e (data flow external 602218 BIO_push)
+    I: 401163
+    I: 401168
+    I: 40116c
+    I: 401170 (data flow external 602200 BIO_set_flags)
+    I: 401175
+    I: 401179
+    I: 40117d
+    I: 401181
+    I: 401183
+    I: 401185 (data flow external 602240 BIO_write)
+    I: 40118a
+    I: 40118f
+    I: 401191
+    I: 401193
+    I: 401197
+    I: 40119b
+    I: 40119e
+    I: 4011a2
+    I: 4011a6
+    I: 4011a9 (data flow external 602258 BIO_ctrl)
+    I: 4011ae
+    I: 4011b3
+    I: 4011b6
+    I: 4011b9
+    I: 4011bd
+    I: 4011c1
+    I: 4011c5 (data flow external 602258 BIO_ctrl)
+    I: 4011ca
+    I: 4011cf
+    I: 4011d2
+    I: 4011d5
+    I: 4011d9
+    I: 4011dc
+    I: 4011e0 (data flow external 602258 BIO_ctrl)
+    I: 4011e5
+    I: 4011e9
+    I: 4011ed (data flow external 602210 BIO_free_all)
+    I: 4011f2
+    I: 4011f4
+    I: 4011f8
+    I: 4011fc
+    I: 401200
+    I: 401203
+    I: 401207
+    I: 401208
+      No successors
+Recovering calcDecodeLength at 401210
+  Analysing subroutine calcDecodeLength at 401210
+  Subroutine calcDecodeLength at 401210 has 7 blocks
+  BB: 401210 in func 401210 with 14 insts
+    I: 401210
+    I: 401211
+    I: 401214
+    I: 401218
+    I: 40121c
+    I: 401220 (data flow external 602230 strlen)
+    I: 401225
+    I: 401229
+    I: 401231
+    I: 401235
+    I: 401239
+    I: 40123d
+    I: 401241
+    I: 401244 (code flow internal 401270 )
+      Successors: 401270, 40124a
+  BB: 401263 in func 401210 with 2 insts
+    I: 401263
+    I: 40126b (code flow internal 401296 )
+      Successors: 401296
+  BB: 401289 in func 401210 with 1 insts
+    I: 401289
+      Successors: 401291
+  BB: 40124a in func 401210 with 6 insts
+    I: 40124a
+    I: 40124e
+    I: 401252
+    I: 401256
+    I: 40125a
+    I: 40125d (code flow internal 401270 )
+      Successors: 401270, 401263
+  BB: 401270 in func 401210 with 6 insts
+    I: 401270
+    I: 401274
+    I: 401278
+    I: 40127c
+    I: 401280
+    I: 401283 (code flow internal 401291 )
+      Successors: 401289, 401291
+  BB: 401291 in func 401210 with 1 insts
+    I: 401291 (code flow internal 401296 )
+      Successors: 401296
+  BB: 401296 in func 401210 with 6 insts
+    I: 401296
+    I: 40129b
+    I: 40129f
+    I: 4012a3
+    I: 4012a7
+    I: 4012a8
+      No successors
+Recovering _start at 400c00
+  Analysing subroutine _start at 400c00
+  Subroutine _start at 400c00 has 1 blocks
+  BB: 400c00 in func 400c00 with 12 insts
+    I: 400c00
+    I: 400c02
+    I: 400c05
+    I: 400c06
+    I: 400c09
+    I: 400c0d
+    I: 400c0e
+    I: 400c0f (code imm internal 401440 __libc_csu_fini)
+    I: 400c16 (code imm internal 4013d0 __libc_csu_init)
+    I: 400c1d (code imm internal 400e00 main)
+    I: 400c24 (data flow external 6021f8 __libc_start_main)
+    I: 400c29
+      Does not return
+Recovering encrypt at 400d00
+  Analysing subroutine encrypt at 400d00
+  Subroutine encrypt at 400d00 has 9 blocks
+  BB: 400d00 in func 400d00 with 12 insts
+    I: 400d00
+    I: 400d01
+    I: 400d04
+    I: 400d08
+    I: 400d0c
+    I: 400d0f
+    I: 400d13
+    I: 400d17
+    I: 400d1b (data flow external 6021e8 EVP_CIPHER_CTX_new)
+    I: 400d20
+    I: 400d24
+    I: 400d28 (code flow internal 400d33 )
+      Successors: 400d33, 400d2e
+  BB: 400d67 in func 400d00 with 1 insts
+    I: 400d67 (code flow internal 400ce0 handleErrors)
+      Does not return
+  BB: 400dc9 in func 400d00 with 1 insts
+    I: 400dc9 (code flow internal 400ce0 handleErrors)
+      Does not return
+  BB: 400d6c in func 400d00 with 9 insts
+    I: 400d6c
+    I: 400d70
+    I: 400d74
+    I: 400d78
+    I: 400d7c
+    I: 400d80 (data flow external 602248 EVP_EncryptUpdate)
+    I: 400d85
+    I: 400d8b
+    I: 400d8e (code flow internal 400d99 )
+      Successors: 400d99, 400d94
+  BB: 400d2e in func 400d00 with 1 insts
+    I: 400d2e (code flow internal 400ce0 handleErrors)
+      Does not return
+  BB: 400d33 in func 400d00 with 13 insts
+    I: 400d33
+    I: 400d37
+    I: 400d3b (data flow external 602260 EVP_aes_256_cbc)
+    I: 400d40
+    I: 400d42
+    I: 400d44
+    I: 400d48
+    I: 400d4c
+    I: 400d50
+    I: 400d53 (data flow external 602280 EVP_EncryptInit_ex)
+    I: 400d58
+    I: 400d5e
+    I: 400d61 (code flow internal 400d6c )
+      Successors: 400d6c, 400d67
+  BB: 400d94 in func 400d00 with 1 insts
+    I: 400d94 (code flow internal 400ce0 handleErrors)
+      Does not return
+  BB: 400dce in func 400d00 with 9 insts
+    I: 400dce
+    I: 400dd1
+    I: 400dd4
+    I: 400dd7
+    I: 400ddb (data flow external 602278 EVP_CIPHER_CTX_free)
+    I: 400de0
+    I: 400de3
+    I: 400de7
+    I: 400de8
+      No successors
+  BB: 400d99 in func 400d00 with 12 insts
+    I: 400d99
+    I: 400d9d
+    I: 400da0
+    I: 400da3
+    I: 400da7
+    I: 400dab
+    I: 400daf
+    I: 400db2
+    I: 400db5 (data flow external 602238 EVP_EncryptFinal_ex)
+    I: 400dba
+    I: 400dc0
+    I: 400dc3 (code flow internal 400dce )
+      Successors: 400dc9, 400dce
+Recovering main at 400e00
+  Analysing subroutine main at 400e00
+  Subroutine main at 400e00 has 1 blocks
+  BB: 400e00 in func 400e00 with 163 insts
+    I: 400e00
+    I: 400e01
+    I: 400e04
+    I: 400e0b (data imm internal 40156e aS)
+    I: 400e15
+    I: 400e1c
+    I: 400e1f
+    I: 400e23 (data imm internal 401465 a16807282475249)
+    I: 400e2b
+    I: 400e32 (code flow internal 400df0 generate_iv)
+    I: 400e37
+    I: 400e3b
+    I: 400e43 (data imm internal 401486 )
+    I: 400e4b (data imm internal 401488 a0b039286d997a3)
+    I: 400e53
+    I: 400e5b (data imm internal 4014b5 aUm9sbglujybpbi)
+    I: 400e63 (data imm internal 4014b5 aUm9sbglujybpbi)
+    I: 400e68
+    I: 400e6c
+    I: 400e70 (code flow internal 4012b0 Base64Decode)
+    I: 400e75
+    I: 400e79
+    I: 400e7d
+    I: 400e81
+    I: 400e85
+    I: 400e89
+    I: 400e90
+    I: 400e93
+    I: 400e9a
+    I: 400ea0 (code flow internal 4012b0 Base64Decode)
+    I: 400ea5
+    I: 400ea9
+    I: 400ead
+    I: 400eb0
+    I: 400eb4
+    I: 400eb7
+    I: 400ebb
+    I: 400ec0
+    I: 400ec4
+    I: 400ec7
+    I: 400eca
+    I: 400ecd
+    I: 400ed1
+    I: 400ed5
+    I: 400edc
+    I: 400edf
+    I: 400ee6
+    I: 400ee9
+    I: 400ef0
+    I: 400ef6 (data flow external 602288 memcpy)
+    I: 400efb
+    I: 400eff
+    I: 400f06
+    I: 400f09
+    I: 400f0d
+    I: 400f11
+    I: 400f18
+    I: 400f1b
+    I: 400f1e
+    I: 400f25 (data flow external 602288 memcpy)
+    I: 400f2a
+    I: 400f2e
+    I: 400f35
+    I: 400f38
+    I: 400f3c
+    I: 400f3f
+    I: 400f43
+    I: 400f47
+    I: 400f4a
+    I: 400f51
+    I: 400f54
+    I: 400f57
+    I: 400f5e (data flow external 602288 memcpy)
+    I: 400f63
+    I: 400f6a
+    I: 400f6e
+    I: 400f72
+    I: 400f76
+    I: 400f79
+    I: 400f7d
+    I: 400f82
+    I: 400f89
+    I: 400f8e
+    I: 400f92
+    I: 400f95
+    I: 400f98
+    I: 400f9b
+    I: 400f9f
+    I: 400fa5
+    I: 400fa9
+    I: 400fad
+    I: 400fb4
+    I: 400fb6
+    I: 400fbd (code flow internal 400d00 encrypt)
+    I: 400fc2
+    I: 400fc8
+    I: 400fcf
+    I: 400fd6
+    I: 400fdd
+    I: 400fe4
+    I: 400fe7 (code flow internal 401120 Base64Encode)
+    I: 400fec
+    I: 400ff0
+    I: 400ff7
+    I: 400ffb
+    I: 401002
+    I: 401005
+    I: 40100b (code flow internal 401120 Base64Encode)
+    I: 401010
+    I: 401017
+    I: 40101d (data flow external 602230 strlen)
+    I: 401022
+    I: 401029
+    I: 401031
+    I: 401038
+    I: 40103c
+    I: 401040
+    I: 401043
+    I: 401046
+    I: 401049
+    I: 401050
+    I: 401054
+    I: 401057
+    I: 40105e (data flow external 602288 memcpy)
+    I: 401063
+    I: 401067
+    I: 40106b
+    I: 40106e
+    I: 401075
+    I: 401079
+    I: 40107d
+    I: 401081
+    I: 401088
+    I: 40108f
+    I: 401093
+    I: 401096
+    I: 401099 (data flow external 602288 memcpy)
+    I: 40109e
+    I: 4010a5
+    I: 4010ac
+    I: 4010ae (data flow external 6021d0 printf)
+    I: 4010b3 (data imm internal 401571 format)
+    I: 4010bd
+    I: 4010c3
+    I: 4010c5 (data flow external 6021d0 printf)
+    I: 4010ca (data imm internal 401573 aD)
+    I: 4010d4
+    I: 4010da
+    I: 4010e0
+    I: 4010e2 (data flow external 6021d0 printf)
+    I: 4010e7 (data imm internal 401571 format)
+    I: 4010f1
+    I: 4010f7
+    I: 4010f9 (data flow external 6021d0 printf)
+    I: 4010fe
+    I: 401105
+    I: 401109
+    I: 40110c
+    I: 40110f
+    I: 401115
+    I: 401117
+    I: 40111a
+    I: 40111b
+      No successors
+Global Variable None
+WARNING: Global constructor and destructor sections are adjacent!
+Recovering region .plt [400a60, 400bf0) in segment .plt
+Recovering region .text [400c00, 401442) in segment .text
+Recovering region .fini [401444, 40144d) in segment .fini
+Recovering region .got.plt [602000, 6020d8) in segment .got.plt
+  8-byte reference at 602018 to 6021d0 (printf)
+  8-byte reference at 602020 to 6021d8 (abort)
+  8-byte reference at 602028 to 6021e0 (__assert_fail)
+  8-byte reference at 602030 to 6021e8 (EVP_CIPHER_CTX_new)
+  8-byte reference at 602038 to 6021f0 (malloc)
+  8-byte reference at 602040 to 6021f8 (__libc_start_main)
+  8-byte reference at 602048 to 602200 (BIO_set_flags)
+  8-byte reference at 602050 to 602208 (BIO_s_mem)
+  8-byte reference at 602058 to 602210 (BIO_free_all)
+  8-byte reference at 602060 to 602218 (BIO_push)
+  8-byte reference at 602068 to 602220 (BIO_f_base64)
+  8-byte reference at 602070 to 602228 (BIO_new_mem_buf)
+  8-byte reference at 602078 to 602230 (strlen)
+  8-byte reference at 602080 to 602238 (EVP_EncryptFinal_ex)
+  8-byte reference at 602088 to 602240 (BIO_write)
+  8-byte reference at 602090 to 602248 (EVP_EncryptUpdate)
+  8-byte reference at 602098 to 602250 (ERR_print_errors_fp)
+  8-byte reference at 6020a0 to 602258 (BIO_ctrl)
+  8-byte reference at 6020a8 to 602260 (EVP_aes_256_cbc)
+  8-byte reference at 6020b0 to 602268 (BIO_read)
+  8-byte reference at 6020b8 to 602270 (BIO_new)
+  8-byte reference at 6020c0 to 602278 (EVP_CIPHER_CTX_free)
+  8-byte reference at 6020c8 to 602280 (EVP_EncryptInit_ex)
+  8-byte reference at 6020d0 to 602288 (memcpy)
+Recovering region .rodata [401450, 4015da) in segment .rodata
+  Variable a01234567890123 at 401454
+  Variable a16807282475249 at 401465
+  Variable a0b039286d997a3 at 401488
+  Variable aUm9sbglujybpbi at 4014b5
+  Variable aS at 40156e
+  Variable format at 401571
+  Variable aD at 401573
+  Variable assertion at 401576
+  Variable file at 40158b
+  Variable function at 4015ae
+Recovering region .data [6020d8, 6020e8) in segment .data
+Recovering region .bss [602100, 602110) in segment .bss
+  8-byte reference at 602100 to 602100 (stderr)
+  Variable completed.7632 at 602108
+Recovering region .plt.got [400bf0, 400bf8) in segment .plt.got
+Recovering region .init_array [601e08, 601e18) in segment .init_array
+  8-byte reference at 601e08 to 400cd0 (frame_dummy)
+  8-byte reference at 601e10 to 400ca0 (__do_global_dtors_aux)
+  Variable __frame_dummy_init_array_entry at 601e08
+  Variable __do_global_dtors_aux_fini_array_entry at 601e10
+Recovering region .got [601ff8, 602000) in segment .got
+  8-byte reference at 601ff8 to 602290 (__gmon_start__)
+Recovering region .init [400a38, 400a52) in segment .init
+Recovering region .eh_frame_hdr [4015dc, 401640) in segment .eh_frame_hdr
+Recovering region .eh_frame [401640, 4017f4) in segment .eh_frame
+Recovering extern function abort at 400a80
+Recovering extern function BIO_ctrl at 400b80
+Recovering extern function BIO_s_mem at 602208
+Recovering extern function memcpy at 602288
+Recovering extern function __assert_fail at 400a90
+Recovering extern function BIO_push at 602218
+Recovering extern function BIO_set_flags at 602200
+Recovering extern function abort at 602118
+Recovering extern function EVP_EncryptInit_ex at 602280
+Recovering extern function BIO_s_mem at 400ae0
+Recovering extern function BIO_new_mem_buf at 400b20
+Recovering extern function BIO_read at 400ba0
+Recovering extern function BIO_new at 400bb0
+Recovering extern function memcpy at 400be0
+Recovering extern function ERR_print_errors_fp at 602250
+Recovering extern function BIO_new_mem_buf at 602228
+Recovering extern function EVP_CIPHER_CTX_free at 602278
+Recovering extern function malloc at 602130
+Recovering extern function malloc at 400ab0
+Recovering extern function strlen at 602170
+Recovering extern function malloc at 6021f0
+Recovering extern function EVP_EncryptUpdate at 602248
+Recovering extern function strlen at 602230
+Recovering extern function __libc_start_main at 602138
+Recovering extern function BIO_new at 602270
+Recovering extern function BIO_f_base64 at 400b10
+Recovering extern function EVP_EncryptFinal_ex at 400b40
+Recovering extern function EVP_CIPHER_CTX_new at 400aa0
+Recovering extern function BIO_write at 400b50
+Recovering extern function EVP_EncryptInit_ex at 400bd0
+Recovering extern function BIO_write at 602240
+Recovering extern function memcpy at 6021c8
+Recovering extern function __assert_fail at 602120
+Recovering extern function BIO_set_flags at 400ad0
+Recovering extern function EVP_EncryptFinal_ex at 602238
+Recovering extern function __assert_fail at 6021e0
+Recovering extern function BIO_f_base64 at 602220
+Recovering extern function abort at 6021d8
+Recovering extern function EVP_aes_256_cbc at 602260
+Recovering extern function __libc_start_main at 400ac0
+Recovering extern function BIO_push at 400b00
+Recovering extern function EVP_EncryptUpdate at 400b60
+Recovering extern function EVP_aes_256_cbc at 400b90
+Recovering extern function EVP_CIPHER_CTX_free at 400bc0
+Recovering extern function EVP_CIPHER_CTX_new at 6021e8
+Recovering extern function printf at 602110
+Recovering extern function ERR_print_errors_fp at 400b70
+Recovering extern function BIO_read at 602268
+Recovering extern function printf at 6021d0
+Recovering extern function BIO_ctrl at 602258
+Recovering extern function BIO_free_all at 602210
+Recovering extern function __libc_start_main at 6021f8
+Recovering extern function printf at 400a70
+Recovering extern function __gmon_start__ at 602290
+Recovering extern function BIO_free_all at 400af0
+Recovering extern function strlen at 400b30
+Recovering extern variable stderr at 602100
+Recovering extern variable BIO_set_flags@@OPENSSL_1.0.0 at 602140
+Recovering extern variable EVP_EncryptUpdate@@OPENSSL_1.0.0 at 602188
+Recovering extern variable ERR_print_errors_fp@@OPENSSL_1.0.0 at 602190
+Recovering extern variable EVP_CIPHER_CTX_free@@OPENSSL_1.0.0 at 6021b8
+Recovering extern variable EVP_EncryptFinal_ex@@OPENSSL_1.0.0 at 602178
+Recovering extern variable EVP_CIPHER_CTX_new@@OPENSSL_1.0.0 at 602128
+Recovering extern variable EVP_aes_256_cbc@@OPENSSL_1.0.0 at 6021a0
+Recovering extern variable EVP_EncryptInit_ex@@OPENSSL_1.0.0 at 6021c0
+Recovering extern variable BIO_new_mem_buf@@OPENSSL_1.0.0 at 602168
+Recovering extern variable BIO_free_all@@OPENSSL_1.0.0 at 602150
+Recovering extern variable BIO_s_mem@@OPENSSL_1.0.0 at 602148
+Recovering extern variable BIO_write@@OPENSSL_1.0.0 at 602180
+Recovering extern variable BIO_ctrl@@OPENSSL_1.0.0 at 602198
+Recovering extern variable BIO_new@@OPENSSL_1.0.0 at 6021b0
+Recovering extern variable BIO_push@@OPENSSL_1.0.0 at 602158
+Recovering extern variable BIO_read@@OPENSSL_1.0.0 at 6021a8
+Recovering extern variable BIO_f_base64@@OPENSSL_1.0.0 at 602160
+Recovered 17 functions.
+Saving to: /home/aditi/encrypt.cfg
+Done analysis!
