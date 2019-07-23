@@ -30,7 +30,3 @@ If you are using mode 2, you will also need to create a stub function as a place
 To replace your function, run the following command:
 
 `bash run.sh [mode (1 or 2)] [path to remill-build directory] [path to IDA Pro] [original binary] [replacement binary] [name of original function] [name of replacement function] [if using mode 2: name of stub function] [any necessary compilation flags]`
-
-## An Example
-
-The capabilities of this tool can be demonstrated in the patching of a common cryptographic vulnerability resulting from a static initialization vector in the CBC mode of AES encryption. We began with a program that calls OpenSSL's implementation of AES, but generates an IV by calling a function that returns a static value. We used this tool to replace the call to this constant function with a call to new function that would generate a randomized IV. With a simple C program containing a replacement function, we ran the tool using both modes to produce a new binary that would generate a random IV. When using mode 2, the new binary checked whether the original function was constant and replaced it only if it was. The code for this example can be found in the `example` directory.
