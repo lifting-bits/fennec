@@ -6,7 +6,7 @@ mv llvm-4.0.1.src llvm
 cd llvm
 mkdir build
 cd build
-cmake -G "Unix Makefiles" ../
+cmake -G "Unix Makefiles" ..
 make
 mv ../../ReplaceFunction ../lib/Transforms
 echo "add_subdirectory(ReplaceFunction)" >> ../lib/Transforms/CMakeLists.txt
