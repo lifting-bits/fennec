@@ -14,12 +14,10 @@ This tool enables post-compilation function call changes; for an arbitrary x86-6
 First, clone this repository using `git clone [INSERT LINK]` and navigate into the directory.
 
 ##### McSema Setup
-You will need a working copy of McSema and Remill - specifically, version 2.0.0. Build instructions can be found at https://github.com/trailofbits/mcsema/tree/v2.0.0. This requires a copy of IDA Pro. Ensure that `clang` executables are in the `remill-build` directory.
+You will need a working copy of McSema and Remill - specifically, version 2.0.0. Build instructions can be found at https://github.com/trailofbits/mcsema/tree/v2.0.0. This requires a copy of IDA Pro.
 
 ##### LLVM Setup
-You will need a copy of LLVM 4.0.1. Then, you must register the pass that will replace a function.
-
-To do this, run `bash llvm-setup.sh`. This step might take some time.
+You will need a copy of LLVM 4.0.1. Then, you must register the pass that will replace a function. To do this, run `bash llvm-setup.sh`. This step might take some time.
 
 ##### Binary Setup
 
