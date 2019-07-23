@@ -29,7 +29,7 @@ mcsema-lift-4.0 --arch amd64 --os linux --cfg $replacement.cfg --output $replace
 sed -i 's/internal//g' $replacement.ll
 # find new names of functions, based on McSema's changes
 functionToReplace=$(grep -o -m 1 sub_[^_]*_$originalFunction $original.ll | xargs)
-replacementFunction=$(grep -o -m 1 sub_[^_]*_$newFunction $replacement.ll | xargs
+replacementFunction=$(grep -o -m 1 sub_[^_]*_$newFunction $replacement.ll | xargs)
 # recompile altered replacement .ll to bitcode
 ./$remillPath/libraries/llvm/bin/llvm-as -o $replacement.bc $replacement.ll
 
