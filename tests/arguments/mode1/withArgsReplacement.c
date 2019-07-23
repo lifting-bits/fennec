@@ -5,6 +5,5 @@ int replacement(int b) {
 }
 
 int main() {
-  printf("%d", replacement(3));
   return 0;
 }

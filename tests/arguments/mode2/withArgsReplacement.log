@@ -1,0 +1,372 @@
+Debugging is enabled.
+Loading Standard Definitions file: /home/aditi/mcsema-2.0.0-ve/env/bin/lib/python2.7/site-packages/mcsema_disass-2.0-py2.7.egg/mcsema_disass/defs/linux.txt
+Using Batch mode.
+Starting analysis
+Recovering module withArgsReplacement
+Looking for instructions in segment .init
+  Default block heads for function 400390 with loose bounds [400390, 4003aa)
+    block [400390, 4003a0)
+    block [4003a0, 4003a5)
+    block [4003a5, 4003aa)
+    chunk [400390, 4003aa)
+Looking for instructions in segment .plt
+  Default block heads for function 4003c0 with loose bounds [4003c0, 4003c6)
+    block [4003c0, 4003c6)
+    chunk [4003c0, 4003c6)
+Looking for instructions in segment .plt.got
+  Default block heads for function 4003d0 with loose bounds [4003d0, 4003d6)
+    block [4003d0, 4003d6)
+    chunk [4003d0, 4003d6)
+Looking for instructions in segment .text
+  Default block heads for function 4003e0 with loose bounds [4003e0, 40040a)
+    block [4003e0, 40040a)
+    chunk [4003e0, 40040a)
+  Default block heads for function 400410 with loose bounds [400410, 40043a)
+    block [400410, 400421)
+    block [400421, 40042b)
+    block [40042b, 400433)
+    block [400438, 40043a)
+    chunk [400410, 40043a)
+  Default block heads for function 400440 with loose bounds [400440, 40047a)
+    block [400440, 400463)
+    block [400463, 40046d)
+    block [40046d, 400475)
+    block [400478, 40047a)
+    chunk [400440, 40047a)
+  Default block heads for function 400480 with loose bounds [400480, 4004a2)
+    block [400480, 400489)
+    block [400489, 40049b)
+    block [4004a0, 4004a2)
+    chunk [400480, 4004a2)
+  Default block heads for function 4004b0 with loose bounds [4004b0, 4004b7)
+    block [4004b0, 4004b7)
+    chunk [4004b0, 4004b7)
+  Default block heads for function 4004c0 with loose bounds [4004c0, 4004d1)
+    block [4004c0, 4004d1)
+    chunk [4004c0, 4004d1)
+  Default block heads for function 4004e0 with loose bounds [4004e0, 4004eb)
+    block [4004e0, 4004eb)
+    chunk [4004e0, 4004eb)
+  Default block heads for function 4004f0 with loose bounds [4004f0, 4004ff)
+    block [4004f0, 4004ff)
+    chunk [4004f0, 4004ff)
+  Default block heads for function 400500 with loose bounds [400500, 400565)
+    block [400500, 400536)
+    block [400536, 400540)
+    block [400540, 400556)
+    block [400556, 400565)
+    chunk [400500, 400565)
+  Default block heads for function 400570 with loose bounds [400570, 400572)
+    block [400570, 400572)
+    chunk [400570, 400572)
+Looking for instructions in segment .fini
+  Default block heads for function 400574 with loose bounds [400574, 40057d)
+    block [400574, 40057d)
+    chunk [400574, 40057d)
+Looking for strings in segment .rodata [400580, 400584)
+Looking for strings in segment .eh_frame_hdr [400584, 4005c8)
+Looking for strings in segment .eh_frame [4005c8, 4006fc)
+Looking for strings in segment .init_array [600e18, 600e20)
+Looking for strings in segment .fini_array [600e20, 600e28)
+Looking for strings in segment .got [600ff8, 601000)
+Looking for strings in segment .got.plt [601000, 601020)
+Looking for strings in segment .data [601020, 601030)
+Looking for strings in segment .bss [601030, 601038)
+Looking for strings in segment extern [601038, 601060)
+Looking for cross-references in segment .init [400390, 4003aa)
+Looking for cross-references in segment .plt [4003b0, 4003d0)
+  Stopping scan at 4003bc
+  Stopping scan at 4003cc
+Looking for cross-references in segment .plt.got [4003d0, 4003d8)
+  Stopping scan at 4003d8
+Looking for cross-references in segment .text [4003e0, 400572)
+  Stopping scan at 40040c
+  Stopping scan at 400434
+  Stopping scan at 40043c
+  Stopping scan at ffffffffffffffff
+  Stopping scan at 40047c
+  Stopping scan at 40049c
+  Stopping scan at 4004ac
+  Stopping scan at 4004bc
+  Stopping scan at 4004dc
+  Stopping scan at 4004ec
+  Stopping scan at ffffffffffffffff
+  Stopping scan at 40056c
+Looking for cross-references in segment .fini [400574, 40057d)
+Looking for cross-references in segment .rodata [400580, 400584)
+  Stopping scan at 400580
+Looking for cross-references in segment .eh_frame_hdr [400584, 4005c8)
+  Stopping scan at 4005c4
+Looking for cross-references in segment .eh_frame [4005c8, 4006fc)
+  Stopping scan at 4006f8
+Looking for cross-references in segment .init_array [600e18, 600e20)
+  Adding qword reference from 600e18 to 4004b0
+  Stopping scan at 600e18
+Looking for cross-references in segment .fini_array [600e20, 600e28)
+  Adding qword reference from 600e20 to 400480
+  Stopping scan at 600e20
+Looking for cross-references in segment .got [600ff8, 601000)
+  Adding qword reference from 600ff8 to 601050
+  Stopping scan at 600ff8
+Looking for cross-references in segment .got.plt [601000, 601020)
+  Adding qword reference from 601018 to 601040
+  Stopping scan at 601018
+Looking for cross-references in segment .data [601020, 601030)
+  Stopping scan at 60102c
+Looking for cross-references in segment .bss [601030, 601038)
+  Stopping scan at 601034
+Looking for cross-references in segment extern [601038, 601060)
+  Stopping scan at 60105c
+Looking for thunks
+  Found thunk for __libc_start_main targeting 601040 at 4003c0
+  Found thunk for off_600FF8 targeting 600ff8 at 4003d0
+Looking for external symbols
+  Function at 4003c0 is the external function __libc_start_main
+  True name of __libc_start_main@@GLIBC_2.2.5 is __libc_start_main
+  Function at 601038 is the external function __libc_start_main
+  Function at 601040 is the external function __libc_start_main
+  Function at 601050 is the external function __gmon_start__
+Looking for entrypoints
+Recovering register_tm_clones at 400440
+  Analysing subroutine register_tm_clones at 400440
+  Subroutine register_tm_clones at 400440 has 4 blocks
+  BB: 400440 in func 400440 with 10 insts
+    I: 400440 (data imm internal 601030 __bss_start)
+    I: 400445
+    I: 400446 (data imm internal 601030 __bss_start)
+    I: 40044d
+    I: 400450
+    I: 400454
+    I: 400457
+    I: 40045b
+    I: 40045e
+    I: 400461 (code flow internal 400478 )
+      Successors: 400478, 400463
+  BB: 400478 in func 400440 with 2 insts
+    I: 400478
+    I: 400479
+      No successors
+  BB: 400463 in func 400440 with 3 insts
+    I: 400463
+    I: 400468
+    I: 40046b (code flow internal 400478 )
+      Successors: 400478, 40046d
+  BB: 40046d in func 400440 with 3 insts
+    I: 40046d
+    I: 40046e (data imm internal 601030 __bss_start)
+    I: 400473
+      No successors
+Recovering main at 4004f0
+  Analysing subroutine main at 4004f0
+  Subroutine main at 4004f0 has 1 blocks
+  BB: 4004f0 in func 4004f0 with 6 insts
+    I: 4004f0
+    I: 4004f1
+    I: 4004f4
+    I: 4004f6
+    I: 4004fd
+    I: 4004fe
+      No successors
+Recovering __gmon_start__ at 4003d0
+  Analysing subroutine __gmon_start__ at 4003d0
+  Subroutine __gmon_start__ at 4003d0 has 1 blocks
+  BB: 4003d0 in func 4003d0 with 1 insts
+    I: 4003d0 (data mem internal 600ff8 )
+      No successors
+Recovering _start at 4003e0
+  Analysing subroutine _start at 4003e0
+  Subroutine _start at 4003e0 has 1 blocks
+  BB: 4003e0 in func 4003e0 with 12 insts
+    I: 4003e0
+    I: 4003e2
+    I: 4003e5
+    I: 4003e6
+    I: 4003e9
+    I: 4003ed
+    I: 4003ee
+    I: 4003ef (code imm internal 400570 __libc_csu_fini)
+    I: 4003f6 (code imm internal 400500 __libc_csu_init)
+    I: 4003fd (code imm internal 4004f0 main)
+    I: 400404 (data flow external 601040 __libc_start_main)
+    I: 400409
+      Does not return
+Recovering deregister_tm_clones at 400410
+  Analysing subroutine deregister_tm_clones at 400410
+  Subroutine deregister_tm_clones at 400410 has 4 blocks
+  BB: 400410 in func 400410 with 5 insts
+    I: 400410
+    I: 400411 (data imm internal 601030 __bss_start)
+    I: 400416 (data imm internal 601030 __bss_start)
+    I: 40041c
+    I: 40041f (code flow internal 400438 )
+      Successors: 400438, 400421
+  BB: 400421 in func 400410 with 3 insts
+    I: 400421
+    I: 400426
+    I: 400429 (code flow internal 400438 )
+      Successors: 400438, 40042b
+  BB: 40042b in func 400410 with 3 insts
+    I: 40042b
+    I: 40042c (data imm internal 601030 __bss_start)
+    I: 400431
+      No successors
+  BB: 400438 in func 400410 with 2 insts
+    I: 400438
+    I: 400439
+      No successors
+Recovering __do_global_dtors_aux at 400480
+  Analysing subroutine __do_global_dtors_aux at 400480
+  Subroutine __do_global_dtors_aux at 400480 has 3 blocks
+  BB: 400480 in func 400480 with 2 insts
+    I: 400480 (data mem internal 601030 __bss_start)
+    I: 400487 (code flow internal 4004a0 )
+      Successors: 4004a0, 400489
+  BB: 400489 in func 400480 with 6 insts
+    I: 400489
+    I: 40048a
+    I: 40048d (code flow internal 400410 deregister_tm_clones)
+    I: 400492 (data mem internal 601030 __bss_start)
+    I: 400499
+    I: 40049a
+      No successors
+  BB: 4004a0 in func 400480 with 1 insts
+    I: 4004a0
+      No successors
+Recovering frame_dummy at 4004b0
+  Analysing subroutine frame_dummy at 4004b0
+  Subroutine frame_dummy at 4004b0 has 1 blocks
+  BB: 4004b0 in func 4004b0 with 4 insts
+    I: 4004b0
+    I: 4004b1
+    I: 4004b4
+    I: 4004b5 (code flow internal 400440 register_tm_clones)
+      Successors: 400440
+Recovering replacement at 4004c0
+  Analysing subroutine replacement at 4004c0
+  Subroutine replacement at 4004c0 has 1 blocks
+  BB: 4004c0 in func 4004c0 with 8 insts
+    I: 4004c0
+    I: 4004c1
+    I: 4004c4
+    I: 4004c7
+    I: 4004ca
+    I: 4004cd
+    I: 4004cf
+    I: 4004d0
+      No successors
+Recovering generate_original at 4004e0
+  Analysing subroutine generate_original at 4004e0
+  Subroutine generate_original at 4004e0 has 1 blocks
+  BB: 4004e0 in func 4004e0 with 6 insts
+    I: 4004e0
+    I: 4004e1
+    I: 4004e4
+    I: 4004e6
+    I: 4004e9
+    I: 4004ea
+      No successors
+Recovering __libc_csu_init at 400500
+  Analysing subroutine __libc_csu_init at 400500
+  Subroutine __libc_csu_init at 400500 has 4 blocks
+  BB: 400500 in func 400500 with 17 insts
+    I: 400500
+    I: 400502
+    I: 400504
+    I: 400507
+    I: 400509
+    I: 40050b (data mem internal 600e18 __frame_dummy_init_array_entry)
+    I: 400512
+    I: 400513 (data mem internal 600e20 __do_global_dtors_aux_fini_array_entry)
+    I: 40051a
+    I: 40051b
+    I: 40051e
+    I: 400521
+    I: 400524
+    I: 400528
+    I: 40052c (code flow internal 400390 .init_proc)
+    I: 400531
+    I: 400534 (code flow internal 400556 )
+      Successors: 400556, 400536
+  BB: 400540 in func 400500 with 7 insts
+    I: 400540
+    I: 400543
+    I: 400546
+    I: 400549
+    I: 40054d
+    I: 400551
+    I: 400554 (code flow internal 400540 )
+      Successors: 400540, 400556
+  BB: 400536 in func 400500 with 2 insts
+    I: 400536
+    I: 400538
+      Successors: 400540
+  BB: 400556 in func 400500 with 8 insts
+    I: 400556
+    I: 40055a
+    I: 40055b
+    I: 40055c
+    I: 40055e
+    I: 400560
+    I: 400562
+    I: 400564
+      No successors
+Recovering .init_proc at 400390
+  Analysing subroutine .init_proc at 400390
+  Subroutine .init_proc at 400390 has 3 blocks
+  BB: 400390 in func 400390 with 4 insts
+    I: 400390
+    I: 400394 (data mem internal 600ff8 )
+    I: 40039b
+    I: 40039e (code flow internal 4003a5 )
+      Successors: 4003a0, 4003a5
+  BB: 4003a0 in func 400390 with 1 insts
+    I: 4003a0 (data flow internal 600ff8 off_600FF8)
+      Successors: 4003a5
+  BB: 4003a5 in func 400390 with 2 insts
+    I: 4003a5
+    I: 4003a9
+      No successors
+Recovering __libc_csu_fini at 400570
+  Analysing subroutine __libc_csu_fini at 400570
+  Subroutine __libc_csu_fini at 400570 has 1 blocks
+  BB: 400570 in func 400570 with 1 insts
+    I: 400570
+      No successors
+Recovering .term_proc at 400574
+  Analysing subroutine .term_proc at 400574
+  Subroutine .term_proc at 400574 has 1 blocks
+  BB: 400574 in func 400574 with 3 insts
+    I: 400574
+    I: 400578
+    I: 40057c
+      No successors
+Global Variable None
+WARNING: Global constructor and destructor sections are adjacent!
+Splitting segment .bss at 601030 for exported variable __bss_start
+Recovering region .rodata [400580, 400584) in segment .rodata
+Recovering region .plt [4003b0, 4003d0) in segment .plt
+Recovering region .plt.got [4003d0, 4003d8) in segment .plt.got
+Recovering region .text [4003e0, 400572) in segment .text
+Recovering region .got.plt [601000, 601020) in segment .got.plt
+  8-byte reference at 601018 to 601040 (__libc_start_main)
+Recovering region .data [601020, 601030) in segment .data
+Recovering region .eh_frame [4005c8, 4006fc) in segment .eh_frame
+Recovering region __bss_start [601030, 601038) in segment .bss
+  Variable __bss_start at 601030
+Recovering region .init [400390, 4003aa) in segment .init
+Recovering region .got [600ff8, 601000) in segment .got
+  8-byte reference at 600ff8 to 601050 (__gmon_start__)
+Recovering region .fini [400574, 40057d) in segment .fini
+Recovering region .init_array [600e18, 600e28) in segment .init_array
+  8-byte reference at 600e18 to 4004b0 (frame_dummy)
+  8-byte reference at 600e20 to 400480 (__do_global_dtors_aux)
+  Variable __frame_dummy_init_array_entry at 600e18
+  Variable __do_global_dtors_aux_fini_array_entry at 600e20
+Recovering region .eh_frame_hdr [400584, 4005c8) in segment .eh_frame_hdr
+Recovering extern function __libc_start_main at 4003c0
+Recovering extern function __libc_start_main at 601038
+Recovering extern function __gmon_start__ at 601050
+Recovering extern function __libc_start_main at 601040
+Recovered 13 functions.
+Saving to: /home/aditi/ToB-Summer19/tests/arguments/mode2/withArgsReplacement.cfg
+Done analysis!

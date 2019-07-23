@@ -21,7 +21,7 @@ You will need a copy of LLVM 4.0.1. Then, you must register the pass that will r
 
 ##### Binary Setup
 
-To use this project, you will need two binaries: the binary you wish to modify, and a binary containing the function you would like to swap into the original. For your replacement binary, the function you wish to use should have a different name from the original, and the `main` function should call this function, although it does not need to do anything with the result.
+To use this project, you will need two binaries: the binary you wish to modify, and a binary containing the function you would like to swap into the original. For your replacement binary, the function you wish to use should have a different name from the original, and the `main` function can be anything.
 
 If you are using mode 2, you will also need to create a stub function as a placeholder for the original function that you're going to be replacing. Make sure to call it something different from the original so the tool can differentiate between them. In your replacement function, you'll want to call this stub where you eventually want to call the original function.
 
