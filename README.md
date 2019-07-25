@@ -13,13 +13,13 @@ This tool enables post-compilation function call changes; for an arbitrary x86-6
 
 First, clone this repository using `git clone [INSERT LINK]` and navigate into the directory.
 
-##### McSema Setup
+###### McSema Setup
 You will need a working copy of McSema and Remill - specifically, version 2.0.0. Build instructions can be found at https://github.com/trailofbits/mcsema/tree/v2.0.0. This requires a copy of IDA Pro.
 
-##### LLVM Setup
+###### LLVM Setup
 You will need a copy of LLVM 4.0.1. Then, you must register the pass that will replace a function. To do this, run `bash llvm-setup.sh`. This step might take some time.
 
-##### Binary Setup
+###### Binary Setup
 
 To use this project, you will need two binaries: the binary you wish to modify, and a binary containing the function you would like to swap into the original. For your replacement binary, the function you wish to use should have a different name from the original, and the `main` function can be anything.
 
@@ -30,3 +30,7 @@ If you are using mode 2, you will also need to create a stub function as a place
 To replace your function, run the following command:
 
 `bash run.sh [mode (1 or 2)] [path to remill-build directory] [path to IDA Pro] [original binary] [replacement binary] [name of original function] [name of replacement function] [if using mode 2: name of stub function] [any necessary compilation flags]`
+
+#### Testing
+
+To test your installation process, run `bash test.sh [path to remill-build directory] [path to IDA Pro]`. This will check several examples, found in the `tests` directory.
