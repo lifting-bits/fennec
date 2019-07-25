@@ -3,6 +3,18 @@
 remillPath=$1
 idaPath=$2
 
+# test basic mode 1
+bash run.sh 1 $remillPath $idaPath tests/basic/mode1/basic tests/basic/mode1/basicReplacement generate replacement
+basicMode1=$(./tests/basic/mode1/basic.new | xargs)
+python -c "assert('$basicMode1' == '2')"
+echo "Basic Mode 1 passed!"
+
+# test basic mode 2
+bash run.sh 2 $remillPath $idaPath tests/basic/mode2_notReplaced/basic tests/basic/mode2_notReplaced/basicReplacement generate replacement original
+basicMode1=$(./tests/basic/mode2_notReplaced/basic.new | xargs)
+python -c "assert('$basicMode1' == '1')"
+echo "Basic Mode 2 passed!"
+
 # test encryption mode 1
 bash run.sh 1 $remillPath $idaPath tests/crypto/mode1/encrypt tests/crypto/mode1/replaceIV_mode1 generate_iv replacement -lcrypto
 encryptMode1Test1=$(./tests/crypto/mode1/encrypt.new "" | head -n 1 | xargs)

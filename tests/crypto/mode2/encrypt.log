@@ -1174,5 +1174,5 @@ Recovering extern variable BIO_push@@OPENSSL_1.0.0 at 602158
 Recovering extern variable BIO_read@@OPENSSL_1.0.0 at 6021a8
 Recovering extern variable BIO_f_base64@@OPENSSL_1.0.0 at 602160
 Recovered 17 functions.
-Saving to: /home/aditi/encrypt.cfg
+Saving to: /home/aditi/ToB-Summer19/tests/crypto/mode2/encrypt.cfg
 Done analysis!

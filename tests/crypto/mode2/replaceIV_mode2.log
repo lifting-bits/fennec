@@ -483,5 +483,5 @@ Recovering extern function RAND_bytes at 601088
 Recovering extern function printf at 601070
 Recovering extern variable RAND_bytes@@OPENSSL_1.0.0 at 601068
 Recovered 14 functions.
-Saving to: /home/aditi/replaceIV_mode2.cfg
+Saving to: /home/aditi/ToB-Summer19/tests/crypto/mode2/replaceIV_mode2.cfg
 Done analysis!

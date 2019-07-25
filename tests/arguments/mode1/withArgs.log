@@ -378,5 +378,5 @@ Recovering extern function __libc_start_main at 400410
 Recovering extern function __gmon_start__ at 601068
 Recovering extern function __libc_start_main at 601058
 Recovered 12 functions.
-Saving to: /home/aditi/ToB-Summer19/tests/arguments/withArgs.cfg
+Saving to: /home/aditi/ToB-Summer19/tests/arguments/mode1/withArgs.cfg
 Done analysis!
