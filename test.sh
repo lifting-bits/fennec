@@ -12,7 +12,7 @@ if [ $basicMode1 = '2' ]
 then
   echo Basic Mode 1 passed
 else
-  echo Basic Mode 1 failed
+  echo -e "\e[31mBasic Mode 1 failed\e[0m"
   status=1
 fi
 
@@ -23,7 +23,7 @@ if [ $basicMode2 = '1' ]
 then
   echo Basic Mode 2 passed
 else
-  echo Basic Mode 2 failed
+  echo -e "\e[31mBasic Mode 2 failed\e[0m"
   status=1
 fi
 
@@ -34,7 +34,7 @@ if [ $argumentsMode1 = '4' ]
 then
   echo Arguments Mode 1 passed
 else
-  echo Arguments Mode 1 failed
+  echo -e "\e[31mArguments Mode 1 failed\e[0m"
   status=1
 fi
 
@@ -45,7 +45,7 @@ if [ $argumentsMode2 = '4' ]
 then
   echo Arguments Mode 2 passed
 else
-  echo Arguments Mode 2 failed
+  echo -e "\e[31mArguments Mode 2 failed\e[0m"
   status=1
 fi
 
@@ -57,7 +57,7 @@ if [ $encryptMode1Test1 != $encryptMode1Test2 ]
 then
   echo Crypto Mode 1 passed
 else
-  echo Crypto Mode 1 failed
+  echo -e "\e[31mCrypto Mode 1 failed\e[0m"
   status=1
 fi
 
@@ -69,7 +69,7 @@ if [ $encryptMode2Test1 != $encryptMode2Test2 ]
 then
   echo Crypto Mode 2 passed
 else
-  echo Crypto Mode 2 failed
+  echo -e "\e[31mCrypto Mode 2 failed\e[0m"
   status=1
 fi
 
@@ -81,7 +81,7 @@ if [ $strippedMode1Test1 != $strippedMode1Test2 ]
 then
   echo Stripped Crypto Mode 1 passed
 else
-  echo Stripped Crypto Mode 1 failed
+  echo -e "\e[31mStripped Crypto Mode 1 failed\e[0m"
   status=1
 fi
 
@@ -93,14 +93,14 @@ if [ $strippedMode2Test1 != $strippedMode2Test2 ]
 then
   echo Stripped Crypto Mode 2 passed
 else
-  echo Stripped Crypto Mode 2 failed
+  echo -e "\e[31mStripped Crypto Mode 2 failed\e[0m"
   status=1
 fi
 
 if [ $status -eq 0 ]
 then
-  echo All tests passed!
+  echo -e "\e[32mAll tests passed!\e[0m"
 else
-  echo Failed!
+  echo -e "\e[31mFailed!\e[0m"
   exit 1
 fi
