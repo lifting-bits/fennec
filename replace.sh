@@ -30,9 +30,14 @@ sed -i 's/internal//g' $replacement.ll
 # find new names of functions, based on McSema's changes
 functionToReplace=$(grep -o -m 1 sub_[^_]*_*$originalFunction $original.ll)
 exitCode=$(echo $?)
-if [ $exitCode = '1' ] # a stripped binary, where function name is the address
+if [ $exitCode = '1' ] # replacing a library function
 then
-  functionToReplace=$originalFunction
+  functionToReplace=$(grep -o -m 1 ext_[^_]*_*$originalFunction $original.ll)
+  exitCode2=$(echo $?)
+  if [ $exitCode2 = '1' ] # a stripped binary, where function name is the address
+  then
+    functionToReplace=$originalFunction
+  fi
 fi
 replacementFunction=$(grep -o -m 1 sub_[^_]*_*$newFunction $replacement.ll)
 # recompile altered replacement .ll to bitcode

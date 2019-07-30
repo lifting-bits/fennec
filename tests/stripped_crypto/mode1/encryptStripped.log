@@ -1114,5 +1114,5 @@ Recovering extern function BIO_free_all at 400af0
 Recovering extern function strlen at 400b30
 Recovering extern variable stderr at 602100
 Recovered 17 functions.
-Saving to: /home/aditi/ToB-Summer19/tests/stripped_crypto/encryptStripped.cfg
+Saving to: /home/aditi/ToB-Summer19/tests/stripped_crypto/mode1/encryptStripped.cfg
 Done analysis!
