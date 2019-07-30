@@ -97,6 +97,39 @@ else
   status=1
 fi
 
+# test fopen mode 1
+bash run.sh 1 $remillPath $idaPath tests/fopen/mode1/prog tests/fopen/mode1/myfopen fopen newfopen
+fopenMode1=$(./tests/fopen/mode1/prog.new | xargs)
+if [ "$fopenMode1" = 'Calling the fopen() function... Always failing fopen fopen() returned NULL' ]
+then
+  echo fopen Mode 1 passed
+else
+  echo -e "\e[31mfopen Mode 1 failed\e[0m"
+  status=1
+fi
+
+# test fopen mode 1 usefopen
+bash run.sh 1 $remillPath $idaPath tests/fopen/mode1_usefopen/prog tests/fopen/mode1_usefopen/myfopen fopen newfopen
+fopenMode1usefopen=$(./tests/fopen/mode1_usefopen/prog.new | xargs)
+if [ "$fopenMode1usefopen" = 'Calling the fopen() function... fopen has been replaced fopen() succeeded' ]
+then
+  echo fopen Mode 1 usefopen passed
+else
+  echo -e "\e[31mfopen Mode 1 usefopen failed\e[0m"
+  status=1
+fi
+
+# test fopen mode 2
+bash run.sh 2 $remillPath $idaPath tests/fopen/mode2/prog tests/fopen/mode2/myfopen fopen newfopen stub
+fopenMode2=$(./tests/fopen/mode2/prog.new | xargs)
+if [ "$fopenMode2" = 'Calling the fopen() function... fopen has been replaced fopen() succeeded' ]
+then
+  echo fopen Mode 2 passed
+else
+  echo -e "\e[31mfopen Mode 2 failed\e[0m"
+  status=1
+fi
+
 if [ $status -eq 0 ]
 then
   echo -e "\e[32mAll tests passed!\e[0m"

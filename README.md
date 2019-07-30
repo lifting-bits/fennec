@@ -8,8 +8,13 @@ This tool allows a choice of two modes, to be specified at runtime using either 
 1. **Single Function Replacement**: This mode should be used for "normal" cases of function replacement, when there is no use for the original function that you are replacing. If you wish to replace the function no matter what, and do not need to call it anywhere else, this is the appropriate mode.
 2. **Dual Function Replacement**: This mode allows you to access the original function from your replacement function. If you wish to test something about the original function or use its result in some manner when you are replacing it, this is the appropriate mode. For example, if your replacement function were used simply to modify the output of the original in some way, this would be the appropriate mode, as you would be able to call the original function in your replacement function.
 
-#### Stripped Binaries
+#### Special Cases
+
+##### Stripped Binaries
 This tool may be used on stripped binaries in addition to those that include symbol information. In order to use the tool in this way, simply specify the stripped function address as it appears in the binary (for example, `sub_400df0`) as the name of the original function.
+
+##### Dynamically Loaded Functions
+It is also possible to replace dynamically loaded functions (for example, `glibc` functions such as `printf` or `fopen`) with this tool, without requiring the use of `LD_PRELOAD`. This utility works the same way as normal function replacement - simply specify the function you are replacing and the name of your new function. In Mode 1, you can continue to use the original function as usual in your replacement function. In other words, there is no need to switch to Mode 2 to retain access to it, so your replacement function can still call the same library function as it worked originally. Alternatively, you can use Mode 2 and create a stub function to replace. These two options will have the same outcome.
 
 ## Usage
 
