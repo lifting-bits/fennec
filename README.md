@@ -1,4 +1,4 @@
-# ToB-Summer19
+# Post-Compilation Rewriting
 
 This tool enables post-compilation function call changes; for an arbitrary x86-64 ELF binary, a user can write a function that will be substituted in for a given function in the binary. The tool will output a new compiled binary that is identical to the original, except that the specified function will be replaced by the new function. This process requires no runtime linking, nor access to the source code of the binary.
 
