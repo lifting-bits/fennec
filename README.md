@@ -11,7 +11,7 @@ Fennec allows a choice of two modes, to be specified at runtime using either a `
 
 #### Installation
 
-First, clone this repository using `git clone [INSERT LINK]` and navigate into the directory.
+First, clone this repository using `git clone https://github.com/trailofbits/fennec` and navigate into the directory.
 
 ##### McSema Setup
 You will need a working copy of McSema and Remill - specifically, version 2.0.0. Build instructions can be found at https://github.com/trailofbits/mcsema/tree/v2.0.0. This requires a copy of IDA Pro.
